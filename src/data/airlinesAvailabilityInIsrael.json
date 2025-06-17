@@ -1,0 +1,132 @@
+[
+  {
+    "name": {
+      "english": "El Al Israel Airlines",
+      "hebrew": "אל על נתיבי אוויר לישראל"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "El Al is the flag carrier of Isragel, operating scheduled international and domestic services from its main base at Ben Gurion International Airport. Known for its stringent security procedures, it connects Israel with numerous destinations across Europe, Asia, Africa, and the Americas.",
+      "hebrew": "אל על היא חברת התעופה הלאומית של ישראל, המפעילה טיסות בינלאומיות ופנימיות סדירות מבסיסה הראשי בנמל התעופה בן-גוריון. היא ידועה בנהלי האבטחה המחמירים שלה, ומחברת את ישראל עם יעדים רבים באירופה, אסיה, אפריקה ואמריקה."
+    },
+    "website": "https://www.elal.com/"
+  },
+  {
+    "name": {
+      "english": "Israir Airlines",
+      "hebrew": "ישראייר"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Israir is an Israeli airline operating domestic scheduled flights and international charter and scheduled services to destinations in Europe and Asia. It is Israel's second-largest airline and focuses on a low-cost model, offering flexible travel options.",
+      "hebrew": "ישראייר היא חברת תעופה ישראלית המפעילה טיסות פנים ארציות סדירות וטיסות שכר וסדירות בינלאומיות ליעדים באירופה ואסיה. זוהי חברת התעופה השנייה בגדלה בישראל, והיא מתמקדת במודל לואו-קוסט, המציעה אפשרויות נסיעה גמישות."
+    },
+    "website": "https://www.israir.co.il/"
+  },
+  {
+    "name": {
+      "english": "Arkia Israeli Airlines",
+      "hebrew": "ארקיע נתיבי אוויר ישראליים"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Arkia is Israel's third-largest airline, providing scheduled domestic and international services, as well as charter flights to various destinations, primarily in Europe and the Mediterranean basin. It focuses on leisure and holiday travel.",
+      "hebrew": "ארקיע היא חברת התעופה השלישית בגדלה בישראל, המפעילה טיסות פנים ארציות ובינלאומיות סדירות, וכן טיסות שכר ליעדים שונים, בעיקר באירופה ובאגן הים התיכון. היא מתמקדת בטיולי פנאי וחופשות."
+    },
+    "website": "https://www.arkia.com/"
+  },
+  {
+    "name": {
+      "english": "Wizz Air",
+      "hebrew": "וויז אייר"
+    },
+    "isAvailable": false,
+    "returnDate": "end of August 2025",
+    "description": {
+      "english": "Wizz Air is a Hungarian ultra-low-cost airline that typically operates flights to Israel from various European cities. Due to ongoing regional developments, their flights to Tel Aviv are currently suspended with a tentative return date.",
+      "hebrew": "וויז אייר היא חברת תעופה הונגרית אולטרה-לואו-קוסט, שבדרך כלל מפעילה טיסות לישראל מערים אירופאיות שונות. עקב התפתחויות אזוריות מתמשכות, טיסותיה לתל אביב מושעיות כרגע עם תאריך חזרה משוער."
+    },
+    "website": "https://wizzair.com/"
+  },
+  {
+    "name": {
+      "english": "Lufthansa",
+      "hebrew": "לופטהנזה"
+    },
+    "isAvailable": false,
+    "returnDate": "July 31, 2025",
+    "description": {
+      "english": "Lufthansa is the largest German airline and typically offers frequent connections to Israel from major German cities and beyond. Their operations to Tel Aviv have been significantly impacted by security concerns.",
+      "hebrew": "לופטהנזה היא חברת התעופה הגרמנית הגדולה ביותר ובדרך כלל מציעה טיסות תכופות לישראל מערים גרמניות מרכזיות ומחוצה להן. פעילותה לתל אביב הושפעה באופן משמעותי בשל חששות ביטחוניים."
+    },
+    "website": "https://www.lufthansa.com/"
+  },
+  {
+    "name": {
+      "english": "Turkish Airlines",
+      "hebrew": "טורקיש איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": "unknown",
+    "description": {
+      "english": "Turkish Airlines, the national flag carrier airline of Turkey, usually has a strong presence in the Israeli market, connecting passengers through its Istanbul hub to a vast global network. Current flight status is uncertain.",
+      "hebrew": "טורקיש איירליינס, חברת התעופה הלאומית של טורקיה, בדרך כלל בעלת נוכחות חזקה בשוק הישראלי, ומחברת נוסעים דרך מרכז איסטנבול שלה לרשת עולמית עצומה. סטטוס הטיסות הנוכחי אינו ודאי."
+    },
+    "website": "https://www.turkishairlines.com/"
+  },
+  {
+    "name": {
+      "english": "British Airways",
+      "hebrew": "בריטיש איירווייז"
+    },
+    "isAvailable": false,
+    "returnDate": "July 31, 2025",
+    "description": {
+      "english": "British Airways is the flag carrier airline of the United Kingdom, known for its premium services. It typically operates direct flights between London and Tel Aviv. Flights are currently suspended.",
+      "hebrew": "בריטיש איירווייז היא חברת התעופה הלאומית של הממלכה המאוחדת, הידועה בשירותי הפרימיום שלה. היא מפעילה בדרך כלל טיסות ישירות בין לונדון לתל אביב. הטיסות מושעות כעת."
+    },
+    "website": "https://www.britishairways.com/"
+  },
+  {
+    "name": {
+      "english": "EasyJet",
+      "hebrew": "איזיג'ט"
+    },
+    "isAvailable": false,
+    "returnDate": "end of June 2025",
+    "description": {
+      "english": "EasyJet is a British low-cost airline group that frequently operates flights to Israel from various European destinations. Their return to Israel has been postponed multiple times.",
+      "hebrew": "איזיג'ט היא קבוצת תעופה בריטית בעלות נמוכה, המפעילה לעיתים קרובות טיסות לישראל מיעדים אירופאיים שונים. חזרתם לישראל נדחתה מספר פעמים."
+    },
+    "website": "https://www.easyjet.com/"
+  },
+  {
+    "name": {
+      "english": "Ryanair",
+      "hebrew": "ריינאייר"
+    },
+    "isAvailable": false,
+    "returnDate": "end of August 2025",
+    "description": {
+      "english": "Ryanair, an Irish ultra-low-cost airline, is a significant player in the European market and typically offers many budget-friendly routes to Israel. Their operations remain suspended for an extended period.",
+      "hebrew": "ריינאייר, חברת תעופה אירית אולטרה-לואו-קוסט, היא שחקן משמעותי בשוק האירופי ובדרך כלל מציעה מסלולים רבים וזולים לישראל. פעילותה נותרה מושעית לפרק זמן ממושך."
+    },
+    "website": "https://www.ryanair.com/"
+  },
+  {
+    "name": {
+      "english": "United Airlines",
+      "hebrew": "יונייטד איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": "September 2025",
+    "description": {
+      "english": "United Airlines, a major US carrier, usually provides direct flights between the United States and Israel. Their return to the Israeli market has been significantly delayed.",
+      "hebrew": "יונייטד איירליינס, חברת תעופה אמריקאית גדולה, בדרך כלל מספקת טיסות ישירות בין ארצות הברית לישראל. חזרתה לשוק הישראלי התעכבה באופן משמעותי."
+    },
+    "website": "https://www.united.com/"
+  }
+]

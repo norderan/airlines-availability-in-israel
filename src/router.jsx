@@ -1,17 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 
-// Import your Layout component
 import Layout from "./components/Layout/Layout";
-
 import AvailableAirlines from "./features/AvailableAirlines/AvailableAirlines";
 import UnavailableAirlines from "./features/UnavailableAirlines/UnavailableAirlines";
-
-import PageNotFound from "./components/PageNotFound/PageNotFound"; // Assuming you have a basic 404 page
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // This route uses your Layout component
+    element: <Layout />,
     errorElement: <PageNotFound />, // Catch errors specifically for routes under this layout
     children: [
       // The "index: true" route renders when the parent path is matched exactly ('/')
