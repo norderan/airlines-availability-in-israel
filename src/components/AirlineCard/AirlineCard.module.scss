@@ -1,0 +1,110 @@
+// Define some basic variables for colors and transitions
+$primary-color: #007bff;
+$secondary-color: #f0f0f0;
+$border-color: #ddd;
+$text-color: white;
+$light-text-color: white;
+$transition-speed: 0.2s;
+$transition-ease: ease;
+$max-content-height: 500px; // A value larger than your content will ever be
+.cardOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 0;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  &:hover {
+    background-color: rgba(white, 0.3);
+  }
+}
+.expandableCard {
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  max-width: 1000px;
+  min-width: 300px;
+  background-image: var(--background-image-url);
+  background-size: cover; /* Scale the background image to be as large as possible */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+
+  .cardHeader {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+    cursor: pointer;
+    user-select: none; // Prevent text selection on click
+    transition: background-color 0.2s $transition-ease; // Smooth hover effect
+
+    .headerTitle {
+      position: relative;
+      z-index: 1;
+      margin-right: 15px;
+      flex-grow: 1;
+    }
+
+    .returnDate {
+      // Style for the strong tag
+      color: #e74c3c; // Example: A warning red color
+      font-size: 0.9em;
+      margin-right: 15px;
+      white-space: nowrap; // Prevent wrapping for short text
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: $text-color;
+    }
+
+    .toggleIcon {
+      font-size: 1.5em;
+      transition: transform $transition-speed $transition-ease;
+
+      // Rotate arrow when expanded
+      &.expanded {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .descriptionWrapper {
+    position: relative;
+    z-index: 1;
+    // Hidden by default with max-height: 0 and opacity: 0
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height $transition-speed $transition-ease,
+      opacity $transition-speed $transition-ease,
+      padding $transition-speed $transition-ease; // Include padding in transition
+
+    padding: 0 15px; // Initial padding when collapsed
+
+    // When expanded, reveal content
+    &.expanded {
+      max-height: $max-content-height; // Set to a large enough value
+      opacity: 1;
+      padding: 15px; // Padding when expanded
+    }
+
+    .cardDescription {
+      color: $light-text-color;
+      line-height: 1.6;
+      padding-bottom: 0; // Reset inner padding if any, as wrapper handles it
+    }
+  }
+}

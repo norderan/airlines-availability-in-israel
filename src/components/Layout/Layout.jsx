@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.css";
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
-// context
+import AvailableAirlines from "../../features/AvailableAirlines/AvailableAirlines";
 
 function Layout() {
   const { language, setLanguage } = useLanguage();
@@ -17,6 +17,7 @@ function Layout() {
     unavailableAirlines:
       language === "english" ? "Unavailable Airlines" : "חברות תעופה לא זמינות",
     about: language === "english" ? "About" : "אודות",
+    home: language === "english" ? "Home" : "בית",
     title:
       language === "english"
         ? "Airlines Availability in Israel"
@@ -37,13 +38,8 @@ function Layout() {
               </Link>
             </li>
             <li>
-              <Link to="/available-airlines" className={styles.navLink}>
-                {text.availableAirlines}
-              </Link>
-            </li>
-            <li>
-              <Link to="/unavailable-airlines" className={styles.navLink}>
-                {text.unavailableAirlines}
+              <Link to="/" className={styles.navLink}>
+                {text.home}
               </Link>
             </li>
           </ul>
@@ -52,12 +48,7 @@ function Layout() {
       </header>
 
       <main className={styles.mainContent}>
-        {/*
-          The Outlet component renders the content of the currently matched child route.
-          If the URL is /available-airlines, AvailableAirlinesPage will render here.
-          If the URL is /unavailable-airlines, UnavailableAirlinesPage will render here.
-        */}
-        <Outlet />
+        <AvailableAirlines />
       </main>
 
       <footer className={styles.footer}>

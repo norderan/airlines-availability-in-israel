@@ -1,16 +1,22 @@
 import React from "react";
-import styles from "../AirlineAvailabilityPages.module.css";
+import styles from "./AvailableAirlines.module.scss";
 import airlinesData from "../../data/airlinesAvailabilityInIsrael.json";
 import { useLanguage } from "../../context/LanguageContext";
-
+import AirlineCard from "../../components/AirlineCard/AirlineCard";
+import { useState } from "react";
 function AvailableAirlines() {
-  const { language } = useLanguage();
+  const [showAvailableAirlines, setShowAvailableAirlines] = useState(true);
 
   const availableAirlines = airlinesData.filter(
-    (airline) => airline.isAvailable
+    (airline) => Boolean(airline.isAvailable) === showAvailableAirlines
   );
 
-  // Define dynamic text based on the selected language
+  const toggleAvailableAirlines = () => {
+    setShowAvailableAirlines(!showAvailableAirlines);
+  };
+  // Language controller
+  const { language } = useLanguage();
+
   const translations = {
     english: {
       title: "Airlines Currently Available to Israel",
@@ -31,34 +37,28 @@ function AvailableAirlines() {
   };
 
   const currentTranslations = translations[language] || translations.english; // Fallback to English
-
+  // Accordion logic
+  const [activeIndex, setActiveIndex] = useState(null);
+  const handleItemClick = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
   return (
     <div>
+      <button className={styles.toggleButton} onClick={toggleAvailableAirlines}>
+        Toogle airline
+      </button>
       <h1>{currentTranslations.title}</h1>
       {availableAirlines.length === 0 ? (
         <p>{currentTranslations.noAirlines}</p>
       ) : (
-        <div>
-          {availableAirlines.map((airline) => (
-            <div key={airline.name.english}>
-              <h2>{airline.name[language]}</h2>
-              <p>
-                <span>{currentTranslations.descriptionLabel}:</span>{" "}
-                {airline.description[language]}
-                {airline.website && (
-                  <>
-                    {" "}
-                    <a
-                      href={airline.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {airline.website}
-                    </a>
-                  </>
-                )}
-              </p>
-            </div>
+        <div className={styles.accordionBody}>
+          {availableAirlines.map((airline, index) => (
+            <AirlineCard
+              key={index}
+              airline={airline}
+              isOpen={index === activeIndex}
+              onClick={() => handleItemClick(index)}
+            />
           ))}
         </div>
       )}
