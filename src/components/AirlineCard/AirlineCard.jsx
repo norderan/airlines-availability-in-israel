@@ -3,6 +3,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import styles from "./AirlineCard.module.scss";
 import processColors from "../../utils/colorProcessor.js";
 import dateProcessor from "../../utils/dateProcessor.js";
+import { ExternalLink } from "lucide-react";
 const AirlineCard = ({ airline, isOpen, onClick }) => {
   // Langauge controller
   const { language } = useLanguage();
@@ -10,6 +11,7 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
     name: airline.name[language] || airline.name.english,
     description: airline.description[language] || airline.description.english,
     unknownReturnDate: language === "hebrew" ? "לא ידוע" : "Unknown",
+    available: language === "hebrew" ? "זמינה" : "Available",
   };
 
   const { primaryColor, secondaryColor } = processColors(
@@ -27,7 +29,7 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
     <div
       className={styles.expandableCard}
       style={{
-        "--background-image-url": `url(/src/assets/images/${airline.imageName})`,
+        "--background-image-url": `url(/src/assets/images/airplane-images/${airline.imageName})`,
       }}
     >
       <div
@@ -46,19 +48,23 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
           role="button"
           tabIndex={0}
         >
-          <h3 className={styles.headerTitle}>{text.name}</h3>{" "}
-          {airline.isAvailable === false && (
-            <strong className={styles.returnDate}>
-              {airline.returnDate === null
-                ? text.unknownReturnDate
-                : dateProcessor(airline.returnDate, language)}
-            </strong>
-          )}
           <span
             className={`${styles.toggleIcon} ${isOpen ? styles.expanded : ""}`}
           >
             {isOpen ? "▲" : "▼"}
           </span>
+          <h3 className={styles.headerTitle}>{text.name}</h3>{" "}
+          <div className={styles.dateOverlay}>
+            {airline.isAvailable === false ? (
+              <strong className={styles.returnDate}>
+                {airline.returnDate === null
+                  ? text.unknownReturnDate
+                  : dateProcessor(airline.returnDate, language)}
+              </strong>
+            ) : (
+              <strong className={styles.available}>{text.available}</strong>
+            )}
+          </div>
         </div>
 
         <div
@@ -69,16 +75,18 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
         >
           <div className={styles.cardDescription}>
             <p>{text.description}</p>
-            {airline.website && (
-              <a
-                href={airline.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.websiteLink}
-              >
-                Visit Website
-              </a>
-            )}
+            <div className={styles.dateOverlay}>
+              {airline.website && (
+                <a
+                  href={airline.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.websiteLink}
+                >
+                  <ExternalLink size={40} />
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

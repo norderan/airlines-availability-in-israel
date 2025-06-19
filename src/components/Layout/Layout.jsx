@@ -3,6 +3,7 @@ import styles from "./Layout.module.scss";
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import AvailableAirlines from "../../features/AvailableAirlines/AvailableAirlines";
+import { Home, Info } from "lucide-react";
 
 function Layout() {
   const { language, setLanguage } = useLanguage();
@@ -18,10 +19,11 @@ function Layout() {
       language === "english" ? "Unavailable Airlines" : "חברות תעופה לא זמינות",
     about: language === "english" ? "About" : "אודות",
     home: language === "english" ? "Home" : "בית",
-    title:
+    title: "SkyTLV",
+    copyright:
       language === "english"
-        ? "Airlines Availability in Israel"
-        : "זמינות חברות תעופה בישראל",
+        ? `© ${new Date().getFullYear()} Yazan Abu Queider. All rights reserved.`
+        : `© ${new Date().getFullYear()} יזן אבו קוידר. כל הזכויות שמורות.`,
   };
 
   return (
@@ -31,33 +33,43 @@ function Layout() {
         (language === "hebrew" ? ` ${styles.hebrewText}` : "")
       }
     >
-      <header className={styles.header}>
-        <button onClick={toggleLanguage}>
-          {language === "english" ? "עברית" : "English"}
-        </button>
+      <header>
+        <h1>{text.title}</h1>
         <nav>
-          <ul className={styles.navList}>
+          <ul>
             <li>
-              <Link to="/about" className={styles.navLink}>
-                {text.about}
+              {" "}
+              <Link to="/">
+                <Home
+                  size={18}
+                  style={{ verticalAlign: "middle", marginRight: 4 }}
+                />
               </Link>
             </li>
             <li>
-              <Link to="/" className={styles.navLink}>
-                {text.home}
+              <Link to="/about">
+                <Info
+                  size={18}
+                  style={{ verticalAlign: "middle", marginRight: 4 }}
+                />
               </Link>
             </li>
           </ul>
+          <button
+            className={styles.toggleLanguageButton}
+            onClick={toggleLanguage}
+          >
+            {language === "english" ? "עברית" : "English"}
+          </button>
         </nav>
-        <h1>{text.title}</h1>
       </header>
-
-      <main className={styles.mainContent}>
-        <AvailableAirlines />
+      <main>
+        <div className={styles.mainContent}>
+          <AvailableAirlines />
+        </div>
       </main>
-
-      <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Norderan. All rights reserved.</p>
+      <footer>
+        <p>{text.copyright}</p>
       </footer>
     </div>
   );

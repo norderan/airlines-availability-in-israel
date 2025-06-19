@@ -17,26 +17,33 @@ function AvailableAirlines() {
   // Language controller
   const { language } = useLanguage();
 
-  const translations = {
+  const text = {
     english: {
+      availableAirlines: "Available Airlines",
+      unavailableAirlines: "Unavailable Airlines",
+      buttonLabelUnavailable: "Show Available Airlines",
+      buttonLabelAvailable: "Show Unavailable Airlines",
       title: "Airlines Currently Available to Israel",
       noAirlines: "No airlines are currently available.",
-      descriptionLabel: "Description",
       availableStatus: "Available",
       unavailableStatus: "Not Available",
-      returnDateLabel: "Estimated Return:",
+      returnDateLabel: "Estimated Return",
+      airlineName: "Airline",
     },
     hebrew: {
-      title: "חברות תעופה זמינות כרגע לישראל",
+      availableAirlines: "חברות תעופה זמינות",
+      unavailableAirlines: "חברות תעופה שאינן זמינות",
+      buttonLabelUnavailable: "הצג חברות תעופה זמינות",
+      buttonLabelAvailable: "הצג חברות תעופה שאינן זמינות",
       noAirlines: "אין חברות תעופה זמינות כרגע.",
-      descriptionLabel: "תיאור",
       availableStatus: "זמינה",
       unavailableStatus: "לא זמינה",
-      returnDateLabel: "חזרה משוערת:",
+      returnDateLabel: "חזרה משוערת",
+      airlineName: "חברת התעופה",
     },
   };
 
-  const currentTranslations = translations[language] || translations.english; // Fallback to English
+  const currentTranslations = text[language] || text.english; // Fallback to English
   // Accordion logic
   const [activeIndex, setActiveIndex] = useState(null);
   const handleItemClick = (index) => {
@@ -44,10 +51,30 @@ function AvailableAirlines() {
   };
   return (
     <div className={language === "hebrew" ? styles.hebrewText : ""}>
-      <button className={styles.toggleButton} onClick={toggleAvailableAirlines}>
-        Toogle airline
-      </button>
-      <h1>{currentTranslations.title}</h1>
+      <div className={styles.accordionHeader}>
+        <h1>
+          {showAvailableAirlines === true
+            ? currentTranslations.availableAirlines
+            : currentTranslations.unavailableAirlines}
+        </h1>
+        <button
+          className={styles.toggleButton}
+          onClick={toggleAvailableAirlines}
+        >
+          {showAvailableAirlines === true
+            ? currentTranslations.buttonLabelAvailable
+            : currentTranslations.buttonLabelUnavailable}
+          {currentTranslations.buttonLabel}
+        </button>
+      </div>
+
+      <div className={styles.accordionSubHeader}>
+        <h3>{currentTranslations.airlineName}</h3>
+        <h3>
+          {showAvailableAirlines !== true &&
+            currentTranslations.returnDateLabel}
+        </h3>
+      </div>
       {availableAirlines.length === 0 ? (
         <p>{currentTranslations.noAirlines}</p>
       ) : (

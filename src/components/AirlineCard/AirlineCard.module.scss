@@ -1,13 +1,12 @@
-// Define some basic variables for colors and transitions
-$primary-color: #007bff;
-$secondary-color: #f0f0f0;
-$border-color: #ddd;
-$text-color: white;
-$light-text-color: white;
-$transition-speed: 0.2s;
-$transition-ease: ease;
-$max-content-height: 500px; // A value larger than your content will ever be
+@use "../../styles/variables";
 
+@mixin contrustSolution {
+  color: white;
+  text-shadow:
+    0 0 8px rgba(0, 2, 74, 0.5),
+    0 0 16px rgba(0, 2, 74, 0.3),
+    0 0 40px rgb(0, 0, 0);
+}
 .hebrewText {
   direction: rtl;
   unicode-bidi: embed; /* Often used with direction: rtl; */
@@ -28,9 +27,9 @@ $max-content-height: 500px; // A value larger than your content will ever be
     background-color: rgba(white, 0.3);
   }
 }
+
 .expandableCard {
   position: relative;
-  border: 1px solid $border-color;
   border-radius: 20px;
   margin-bottom: 15px;
   overflow: hidden;
@@ -47,39 +46,59 @@ $max-content-height: 500px; // A value larger than your content will ever be
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
 
     cursor: pointer;
     user-select: none; // Prevent text selection on click
-    transition: background-color 0.2s $transition-ease; // Smooth hover effect
+    transition: background-color 0.2s ease; // Smooth hover effect
 
     .headerTitle {
       position: relative;
       z-index: 1;
-      margin-right: 15px;
       flex-grow: 1;
     }
+    .dateOverlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      background-color: rgba(0, 2, 74, 0.4);
+      margin: 0;
+      min-width: 100px;
+      .returnDate {
+        color: #f43652;
+        text-shadow:
+          0 0 8px rgba(255, 0, 0, 0.7),
+          0 0 16px rgba(235, 24, 55, 0.4),
+          0 0 40px rgba(235, 24, 55, 0.3);
+        font-size: 0.9em;
 
-    .returnDate {
-      // Style for the strong tag
-      color: white; // Example: A warning red color
-      font-size: 0.9em;
-      margin-right: 15px;
-      white-space: nowrap; // Prevent wrapping for short text
+        white-space: nowrap; // Prevent wrapping for short text
+      }
+      .available {
+        // Style for the strong tag
+
+        color: #2ecc40;
+        text-shadow:
+          0 0 8px rgba(46, 204, 64, 0.7),
+          0 0 16px rgba(46, 204, 64, 0.4),
+          0 0 40px rgba(46, 204, 64, 0.3);
+        font-size: 0.9em;
+
+        white-space: nowrap; // Prevent wrapping for short text
+      }
     }
 
     h3 {
       margin: 0;
       font-size: 1.2em;
-      color: $text-color;
+      @include contrustSolution;
     }
 
     .toggleIcon {
-      color: $text-color;
-      font-size: 1.5em;
-      transition: transform $transition-speed $transition-ease;
-
-      // Rotate arrow when expanded
+      @include contrustSolution;
+      font-size: 1em;
+      transition: transform 0.2s ease;
+      margin: 0px 15px;
       &.expanded {
         transform: rotate(180deg);
       }
@@ -94,23 +113,51 @@ $max-content-height: 500px; // A value larger than your content will ever be
     opacity: 0;
     overflow: hidden;
     transition:
-      max-height $transition-speed $transition-ease,
-      opacity $transition-speed $transition-ease,
-      padding $transition-speed $transition-ease; // Include padding in transition
-
-    padding: 0 15px; // Initial padding when collapsed
+      max-height 0.2s ease,
+      opacity 0.2s ease,
+      padding 0.2s ease; // Include padding in transition
 
     // When expanded, reveal content
     &.expanded {
-      max-height: $max-content-height; // Set to a large enough value
+      max-height: 400px; // Set to a large enough value
       opacity: 1;
-      padding: 15px; // Padding when expanded
     }
 
     .cardDescription {
-      color: $light-text-color;
-      line-height: 1.6;
-      padding-bottom: 0; // Reset inner padding if any, as wrapper handles it
+      display: flex;
+      color: white;
+      text-shadow:
+        0 0 8px rgba(0, 2, 74, 0.5),
+        0 0 16px rgba(0, 2, 74, 0.3);
+      p {
+        margin: 0px 40px 20px 40px;
+      }
+      .dateOverlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 15px 0 15px;
+        background-color: rgba(0, 2, 74, 0.4);
+        min-width: 100px;
+        a {
+          margin-bottom: 20px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          > * {
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+            color: rgba(255, 255, 255, 0.7);
+            &:hover {
+              color: #c40048d0;
+              filter: drop-shadow(0 0 5px #c40048d0)
+                drop-shadow(0 0 8px #c40048d0);
+            }
+          }
+        }
+      }
     }
   }
 }
