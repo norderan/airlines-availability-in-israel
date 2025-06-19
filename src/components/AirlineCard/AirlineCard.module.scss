@@ -62,7 +62,7 @@ $max-content-height: 500px; // A value larger than your content will ever be
 
     .returnDate {
       // Style for the strong tag
-      color: #e74c3c; // Example: A warning red color
+      color: white; // Example: A warning red color
       font-size: 0.9em;
       margin-right: 15px;
       white-space: nowrap; // Prevent wrapping for short text
@@ -75,6 +75,7 @@ $max-content-height: 500px; // A value larger than your content will ever be
     }
 
     .toggleIcon {
+      color: $text-color;
       font-size: 1.5em;
       transition: transform $transition-speed $transition-ease;
 

@@ -12,7 +12,9 @@
     },
     "website": "https://www.elal.com/",
     "primaryColor": "hsl(220, 40%, 30%)",
-    "secondaryColor": "hsl(44, 100%, 50%)"
+    "image": "elal.avif",
+    "secondaryColor": "hsl(44, 100%, 50%)",
+    "imageName": "elal.avif"
   },
   {
     "name": {
@@ -27,7 +29,8 @@
     },
     "website": "https://www.israir.co.il/",
     "primaryColor": "hsl(28, 90%, 55%)",
-    "secondaryColor": "hsl(210, 60%, 35%)"
+    "secondaryColor": "hsl(210, 60%, 35%)",
+    "imageName": "israir.jpg"
   },
   {
     "name": {
@@ -42,7 +45,8 @@
     },
     "website": "https://www.arkia.com/",
     "primaryColor": "hsl(196, 100%, 40%)",
-    "secondaryColor": "hsl(30, 100%, 50%)"
+    "secondaryColor": "hsl(30, 100%, 50%)",
+    "imageName": "arkia.jpg"
   },
   {
     "name": {
@@ -57,7 +61,8 @@
     },
     "website": "https://wizzair.com/",
     "primaryColor": "hsl(320, 70%, 40%)",
-    "secondaryColor": "hsl(210, 80%, 50%)"
+    "secondaryColor": "hsl(210, 80%, 50%)",
+    "imageName": "wizz.jpg"
   },
   {
     "name": {
@@ -72,7 +77,8 @@
     },
     "website": "https://www.lufthansa.com/",
     "primaryColor": "hsl(220, 60%, 25%)",
-    "secondaryColor": "hsl(44, 100%, 50%)"
+    "secondaryColor": "hsl(44, 100%, 50%)",
+    "imageName": "lufthansa.jpg"
   },
   {
     "name": {
@@ -87,7 +93,8 @@
     },
     "website": "https://www.turkishairlines.com/",
     "primaryColor": "hsl(0, 80%, 40%)",
-    "secondaryColor": "hsl(0, 0%, 100%)"
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "turkish.jpg"
   },
   {
     "name": {
@@ -97,12 +104,13 @@
     "isAvailable": false,
     "returnDate": "31/07/2025",
     "description": {
-      "english": "British Airways is the flag carrier airline of the United Kingdom, known for its premium services. It typically operates direct flights between London and Tel Aviv. Flights are currently suspended.",
+      "english": "British Airways is the flag carrier airline of the United Kingdom, known its premium services. It typically operates direct flights between London and Tel Aviv. Flights are currently suspended.",
       "hebrew": "בריטיש איירווייז היא חברת התעופה הלאומית של הממלכה המאוחדת, הידועה בשירותי הפרימיום שלה. היא מפעילה בדרך כלל טיסות ישירות בין לונדון לתל אביב. הטיסות מושעות כעת."
     },
     "website": "https://www.britishairways.com/",
     "primaryColor": "hsl(220, 80%, 30%)",
-    "secondaryColor": "hsl(0, 80%, 40%)"
+    "secondaryColor": "hsl(0, 80%, 40%)",
+    "imageName": "british.webp"
   },
   {
     "name": {
@@ -117,7 +125,8 @@
     },
     "website": "https://www.easyjet.com/",
     "primaryColor": "hsl(28, 100%, 50%)",
-    "secondaryColor": "hsl(0, 0%, 100%)"
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "easyjet.jpeg"
   },
   {
     "name": {
@@ -132,7 +141,8 @@
     },
     "website": "https://www.ryanair.com/",
     "primaryColor": "hsl(220, 80%, 30%)",
-    "secondaryColor": "hsl(48, 100%, 50%)"
+    "secondaryColor": "hsl(48, 100%, 50%)",
+    "imageName": "ryanair.jpg"
   },
   {
     "name": {
@@ -147,6 +157,7 @@
     },
     "website": "https://www.united.com/",
     "primaryColor": "hsl(210, 100%, 30%)",
-    "secondaryColor": "hsl(210, 30%, 80%)"
+    "secondaryColor": "hsl(210, 30%, 80%)",
+    "imageName": "united.webp"
   }
 ]

@@ -1,7 +1,6 @@
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import styles from "./AirlineCard.module.scss";
-import elalImage from "../../assets/images/elal.avif";
 import processColors from "../../utils/colorProcessor.js";
 import dateProcessor from "../../utils/dateProcessor.js";
 const AirlineCard = ({ airline, isOpen, onClick }) => {
@@ -23,10 +22,13 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
   const secondaryColorByLanguage =
     language === "hebrew" ? primaryColor : secondaryColor;
 
+  console.log(`url(../../assets/images/${airline.imageName})`);
   return (
     <div
       className={styles.expandableCard}
-      style={{ "--background-image-url": `url(${elalImage})` }}
+      style={{
+        "--background-image-url": `url(/src/assets/images/${airline.imageName})`,
+      }}
     >
       <div
         className={styles.cardOverlay}
