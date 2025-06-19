@@ -1,3 +1,8 @@
+.hebrewText {
+  direction: rtl;
+  unicode-bidi: embed; /* Often used with direction: rtl; */
+}
+
 .container {
   display: flex;
   flex-direction: column;

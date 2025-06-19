@@ -7,6 +7,11 @@ $light-text-color: white;
 $transition-speed: 0.2s;
 $transition-ease: ease;
 $max-content-height: 500px; // A value larger than your content will ever be
+
+.hebrewText {
+  direction: rtl;
+  unicode-bidi: embed; /* Often used with direction: rtl; */
+}
 .cardOverlay {
   top: 0;
   left: 0;

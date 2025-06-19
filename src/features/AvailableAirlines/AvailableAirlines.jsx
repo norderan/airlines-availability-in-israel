@@ -43,7 +43,7 @@ function AvailableAirlines() {
     setActiveIndex(index === activeIndex ? null : index);
   };
   return (
-    <div>
+    <div className={language === "hebrew" ? styles.hebrewText : ""}>
       <button className={styles.toggleButton} onClick={toggleAvailableAirlines}>
         Toogle airline
       </button>

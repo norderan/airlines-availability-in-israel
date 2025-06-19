@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import styles from "./Layout.module.css";
+import styles from "./Layout.module.scss";
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import AvailableAirlines from "../../features/AvailableAirlines/AvailableAirlines";
@@ -25,7 +25,12 @@ function Layout() {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        styles.container +
+        (language === "hebrew" ? ` ${styles.hebrewText}` : "")
+      }
+    >
       <header className={styles.header}>
         <button onClick={toggleLanguage}>
           {language === "english" ? "עברית" : "English"}

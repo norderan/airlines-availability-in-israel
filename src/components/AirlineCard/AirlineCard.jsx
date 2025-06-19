@@ -3,17 +3,25 @@ import { useLanguage } from "../../context/LanguageContext";
 import styles from "./AirlineCard.module.scss";
 import elalImage from "../../assets/images/elal.avif";
 import processColors from "../../utils/colorProcessor.js";
+import dateProcessor from "../../utils/dateProcessor.js";
 const AirlineCard = ({ airline, isOpen, onClick }) => {
   // Langauge controller
   const { language } = useLanguage();
-  const name = airline.name[language] || airline.name.english;
-  const description =
-    airline.description[language] || airline.description.english;
+  const text = {
+    name: airline.name[language] || airline.name.english,
+    description: airline.description[language] || airline.description.english,
+    unknownReturnDate: language === "hebrew" ? "לא ידוע" : "Unknown",
+  };
 
   const { primaryColor, secondaryColor } = processColors(
     airline.primaryColor,
     airline.secondaryColor
   );
+
+  const primaryColorByLanguage =
+    language === "hebrew" ? secondaryColor : primaryColor;
+  const secondaryColorByLanguage =
+    language === "hebrew" ? primaryColor : secondaryColor;
 
   return (
     <div
@@ -23,8 +31,8 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
       <div
         className={styles.cardOverlay}
         style={{
-          "--gradient-start": primaryColor || "#000",
-          "--gradient-end": secondaryColor || "#fff",
+          "--gradient-start": primaryColorByLanguage || "#000",
+          "--gradient-end": secondaryColorByLanguage || "#fff",
         }}
       >
         <div
@@ -32,14 +40,16 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
           onClick={onClick}
           // ARIA attributes for accessibility
           aria-expanded={isOpen}
-          aria-controls={`description-${name.replace(/\s+/g, "-")}`}
+          aria-controls={`description-${text.name.replace(/\s+/g, "-")}`}
           role="button"
           tabIndex={0}
         >
-          <h3 className={styles.headerTitle}>{name}</h3>{" "}
+          <h3 className={styles.headerTitle}>{text.name}</h3>{" "}
           {airline.isAvailable === false && (
             <strong className={styles.returnDate}>
-              Estimated Return Date: {airline.returnDate}
+              {airline.returnDate === null
+                ? text.unknownReturnDate
+                : dateProcessor(airline.returnDate, language)}
             </strong>
           )}
           <span
@@ -50,13 +60,13 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
         </div>
 
         <div
-          id={`description-${name.replace(/\s+/g, "-")}`}
+          id={`description-${text.name.replace(/\s+/g, "-")}`}
           className={`${styles.descriptionWrapper} ${isOpen ? styles.expanded : ""}`}
           aria-hidden={!isOpen}
           role="region"
         >
           <div className={styles.cardDescription}>
-            <p>{description}</p>
+            <p>{text.description}</p>
             {airline.website && (
               <a
                 href={airline.website}
