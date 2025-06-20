@@ -29,6 +29,8 @@
 }
 
 .expandableCard {
+  box-shadow: 0 0px 5px rgba(0, 13, 255, 0.4);
+
   position: relative;
   border-radius: 20px;
   margin-bottom: 15px;
@@ -60,7 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 15px;
+      padding: 25px;
       background-color: rgba(0, 2, 74, 0.4);
       margin: 0;
       min-width: 100px;
@@ -70,7 +72,6 @@
           0 0 8px rgba(255, 0, 0, 0.7),
           0 0 16px rgba(235, 24, 55, 0.4),
           0 0 40px rgba(235, 24, 55, 0.3);
-        font-size: 0.9em;
 
         white-space: nowrap; // Prevent wrapping for short text
       }
@@ -82,7 +83,6 @@
           0 0 8px rgba(46, 204, 64, 0.7),
           0 0 16px rgba(46, 204, 64, 0.4),
           0 0 40px rgba(46, 204, 64, 0.3);
-        font-size: 0.9em;
 
         white-space: nowrap; // Prevent wrapping for short text
       }
@@ -90,7 +90,7 @@
 
     h3 {
       margin: 0;
-      font-size: 1.2em;
+      font-size: 1.3em;
       @include contrustSolution;
     }
 
@@ -131,13 +131,15 @@
         0 0 16px rgba(0, 2, 74, 0.3);
       p {
         margin: 0px 40px 20px 40px;
+        @include variables.pTheme(var(--color-text-invert));
+        font-weight: 500;
       }
       .dateOverlay {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0px 15px 0 15px;
+        padding: 0px 25px 0 25px;
         background-color: rgba(0, 2, 74, 0.4);
         min-width: 100px;
         a {

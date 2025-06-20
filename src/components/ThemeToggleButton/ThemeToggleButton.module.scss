@@ -1,0 +1,11 @@
+@use "../../styles/variables";
+
+a {
+  svg {
+    color: var(--color-text-primary);
+    &:hover {
+      cursor: pointer;
+      color: var(--color-accent);
+    }
+  }
+}

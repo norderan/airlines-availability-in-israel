@@ -1,0 +1,31 @@
+@use "./variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 530px;
+}
+
+h1 {
+  @include variables.h1Theme();
+}
+
+h2 {
+  @include variables.h2Theme();
+}
+
+h3 {
+  @include variables.h3Theme();
+}
+
+p {
+  @include variables.pTheme();
+}
+
+strong {
+  @include variables.strongTheme();
+}
+
+button {
+  @include variables.buttonTheme();
+}

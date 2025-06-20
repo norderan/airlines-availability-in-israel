@@ -1,135 +1,170 @@
 // src/styles/_variables.scss
 
 // 1. Google Fonts Import (or add these to your public/index.html <head> for better performance)
-// Heebo for excellent Hebrew support and modern look, Roboto for general sans-serif.
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Hebrew:wght@100..900&display=swap");
 
-// 2. SCSS Variables (for internal calculations and initial definitions within this file)
-// These define the base values that CSS Custom Properties will use.
-$light-blue-sky: #e0f2f7; // Very light blue, airy
-$medium-blue-sky: #b0e0e6; // Slightly deeper blue
-$deep-ocean-blue: #0a192f; // For very dark backgrounds in dark mode
-$navy-primary: #1c3494; // A strong, reliable primary blue (like El Al's darker blue)
-$electric-blue: #007bff; // Standard vibrant blue
-$sun-gold: #ffd700; // Bright gold for accents
-$cloud-white: #ffffff; // Pure white
-$soft-grey: #f0f0f0; // Off-white for light backgrounds
-$dark-text-color: #333333; // Standard dark text
-$medium-text-color: #555555; // Slightly lighter dark text
+$primary-hex: #b0e0e6;
+$secondary-hex: #007bff;
+$accent-hex: #c40048;
+$dark-primary-hex: #01262b;
+$dark-secondary-hex: #007bff;
+$dark-accent-hex: #c40048;
 
-// Dark Mode Specific Colors
-$dark-background-deep: #121212; // Deep, true dark mode background
-$dark-background-mid: #1e1e1e; // Slightly lighter for subtle layering
-$dark-background-light: #2c2c2c; // Even lighter dark for card backgrounds
-$dark-text-color-light: #e0e0e0; // Light text on dark background
-$dark-text-color-lighter: #f5f5f5; // Even lighter text
-
-// Status Colors (often consistent across themes for immediate recognition)
-$status-available-green: #28a745;
-$status-unavailable-red: #dc3545;
-$status-tentative-orange: #ffc107;
-
-// 3. CSS Custom Properties (The actual variables your components will use)
-// These are defined in :root (defaulting to light mode) and overridden in .dark-mode
 :root {
   // Brand & Accent Colors
-  --color-primary: #{$medium-blue-sky};
-  --color-secondary: #{$electric-blue};
-  --color-uniqe: #c40048;
+  --color-primary: #{$primary-hex};
+  --color-secondary: #{$secondary-hex};
+  --color-accent: #{$accent-hex};
 
-  // Background Colors
-  --color-background-page: #{$light-blue-sky};
-  --color-background-card: rgba(
-    $cloud-white,
-    0.9
-  ); // Semi-transparent for glassmorphism
-  --color-background-section: #{$soft-grey};
+  // Using for glass colors
+  --color-primary-rgb:
+    #{red($primary-hex)}, #{green($primary-hex)}, #{blue($primary-hex)};
+  --color-secondary-rgb:
+    #{red($secondary-hex)}, #{green($secondary-hex)}, #{blue($secondary-hex)};
+  --color-accent-rgb:
+    #{red($accent-hex)}, #{green($accent-hex)}, #{blue($accent-hex)};
+
+  // Glass colors
+  --color-primary-glass: rgba(var(--color-primary-rgb), 0.7);
+  --color-secondary-glass: rgba(var(--color-secondary-rgb), 0.7);
+  --color-accent-glass: rgba(var(--color-accent-rgb), 0.7);
 
   // Text Colors
-  --color-text-primary: #{$dark-text-color};
-  --color-text-secondary: #{$medium-text-color};
-  --color-text-inverted: #{$cloud-white}; // For text on dark elements
+  --color-text-primary: #333333;
+  --color-text-secondary: #555555;
+  --color-text-inverted: #ffffff;
 
   // Border & Shadow
-  --color-border: #{$medium-blue-sky}; // Border related to sky theme
+  --color-border: black; // Border related to sky theme
   --color-shadow: rgba(0, 0, 0, 0.1);
 
-  // Gradient Overlays (for glassmorphism)
-  // These use HSL for easier manipulation of hue, saturation, lightness, and alpha
-  --gradient-start: hsla(210, 80%, 40%, 0.7); // Deep blue, semi-transparent
-  --gradient-end: hsla(40, 100%, 60%, 0.7); // Gold/Orange, semi-transparent
+  // Status Colors
+  --color-status-available: #2ecc40;
+  --color-status-unavailable: #f43652;
+  --color-status-tentative: #f4b536;
 
-  // Status Colors (remain consistent for clarity)
-  --color-status-available: #{$status-available-green};
-  --color-status-unavailable: #{$status-unavailable-red};
-  --color-status-tentative: #{$status-tentative-orange};
+  --font-family-p: "Lato", "Noto Sans Hebrew", sans-serif;
+  --font-family-h: "Noto Sans Hebrew", sans-serif;
 
-  // Fonts
-  // Prioritize Heebo for Hebrew-first content, Roboto for general English.
-  // Use a sensible fallback stack.
-  --font-family-hebrew: "Heebo", sans-serif;
-  --font-family-english: "Roboto", sans-serif;
-  --font-family-base:
-    var(--font-family-hebrew), var(--font-family-english); // Default for body
+  // bg image
 
-  --font-size-base: 16px;
-  --font-size-sm: 0.875rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-xxl: 2rem;
+  --bg: url("/bgs/bg-light.avif");
 }
-
-// 4. Dark Mode Overrides (.dark-mode class)
-.dark-mode {
+:root.dark-mode {
   // Brand & Accent Colors
-  --color-brand-primary: #{$electric-blue}; // Use a lighter blue as primary in dark mode
-  --color-brand-secondary: #{$sun-gold};
-  --color-electric-blue: #{$electric-blue};
+  --color-primary: #{$dark-primary-hex};
+  --color-secondary: #{$dark-secondary-hex};
+  --color-accent: #{$dark-accent-hex};
 
-  // Background Colors
-  --color-background-page: #{$dark-background-deep};
-  --color-background-card: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); // Darker transparent for glassmorphism
-  --color-background-section: #{$dark-background-mid};
+  // Using for glass colors
+  --color-primary-rgb:
+    #{red($dark-primary-hex)}, #{green($dark-primary-hex)},
+    #{blue($dark-primary-hex)};
+  --color-secondary-rgb:
+    #{red($dark-secondary-hex)}, #{green($dark-secondary-hex)},
+    #{blue($dark-secondary-hex)};
+  --color-accent-rgb:
+    #{red($dark-accent-hex)}, #{green($dark-accent-hex)},
+    #{blue($dark-accent-hex)};
+
+  // Glass colors
+  --color-primary-glass: rgba(var(--color-primary-rgb), 0.7);
+  --color-secondary-glass: rgba(var(--color-secondary-rgb), 0.7);
+  --color-accent-glass: rgba(var(--color-accent-rgb), 0.7);
 
   // Text Colors
-  --color-text-primary: #{$dark-text-color-light};
-  --color-text-secondary: #{$dark-text-color-lighter};
-  --color-text-inverted: #{$dark-text-color}; // For text on light elements (less common in dark mode)
+  --color-text-primary: #f0f0f0;
+  --color-text-secondary: #cccccc;
+  --color-text-inverted: #181818;
 
   // Border & Shadow
-  --color-border: #{$dark-background-light}; // Lighter border on dark background
-  --color-shadow: rgba(255, 255, 255, 0.1); // Lighter shadow for dark mode
+  --color-border: black; // Border related to sky theme
+  --color-shadow: rgba(0, 0, 0, 0.1);
 
-  // Gradient Overlays (for glassmorphism in dark mode)
-  --gradient-start: hsla(210, 80%, 20%, 0.7); // Darker blue, semi-transparent
-  --gradient-end: hsla(
-    40,
-    100%,
-    30%,
-    0.7
-  ); // Darker gold/orange, semi-transparent
+  // Status Colors
+  --color-status-available: #2ecc40;
+  --color-status-unavailable: #f43652;
+  --color-status-tentative: #f4b536;
+
+  --font-family-p: "Lato", "Noto Sans Hebrew", sans-serif;
+  --font-family-h: "Noto Sans Hebrew", sans-serif;
+
+  --bg: url("/bgs/bg-dark.avif");
+}
+@mixin h1Theme($color: var(--color-text-primary)) {
+  color: $color;
+  font-family: var(--font-family-h);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+@mixin h2Theme($color: var(--color-text-primary)) {
+  color: $color;
+  font-family: var(--font-family-h);
+  font-weight: 500;
+  font-size: 2rem;
 }
 
-// 5. General Utility Variables (not affected by theme)
-$spacing-xs: 4px;
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 24px;
-$spacing-xl: 32px;
-$spacing-xxl: 48px;
+@mixin h3Theme($color: var(--color-text-primary)) {
+  color: $color;
+  font-family: var(--font-family-h);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
 
-$border-radius-sm: 4px;
-$border-radius-md: 8px;
-$border-radius-lg: 12px;
-$border-radius-xl: 20px; // For your cards, consistent with previous code
+@mixin strongTheme($color: var(--color-text-primary)) {
+  color: $color;
+  font-family: var(--font-family-p);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+@mixin pTheme($color: var(--color-text-secondary)) {
+  color: $color;
+  font-family: var(--font-family-p);
+  font-weight: 400;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
 
-$transition-speed-fast: 0.2s;
-$transition-speed-normal: 0.3s;
-$transition-ease: ease-in-out;
-$max-content-height: 500px; // A value larger than your content will ever be
+@mixin buttonTheme {
+  background-color: var(--color-secondary);
+  @include pTheme(white);
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 1px 3px var(--color-secondary);
+
+  &:hover {
+    background-color: var(--color-accent);
+    box-shadow: 0 2px 8px var(--color-accent);
+  }
+}
+
+@mixin iconTheme {
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 2px 8px 2px var(--color-secondary); // More spread, softer shadow
+
+  color: var(--color-text-primary);
+  &:hover {
+    color: var(--color-accent);
+    box-shadow: 0 4px 16px 4px var(--color-accent); // Even softer and more spread on hover
+  }
+}
+
+// In your _variables.scss or a separate mixins file
+
+@mixin bg() {
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

@@ -2,9 +2,8 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.scss";
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
-import AvailableAirlines from "../../features/AvailableAirlines/AvailableAirlines";
 import { Home, Info } from "lucide-react";
-
+import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
 function Layout() {
   const { language, setLanguage } = useLanguage();
 
@@ -41,7 +40,8 @@ function Layout() {
               {" "}
               <Link to="/">
                 <Home
-                  size={18}
+                  className={styles.naveIcon}
+                  size={32}
                   style={{ verticalAlign: "middle", marginRight: 4 }}
                 />
               </Link>
@@ -49,12 +49,14 @@ function Layout() {
             <li>
               <Link to="/about">
                 <Info
-                  size={18}
+                  className={styles.naveIcon}
+                  size={32}
                   style={{ verticalAlign: "middle", marginRight: 4 }}
                 />
               </Link>
             </li>
           </ul>
+          <ThemeToggleButton />
           <button
             className={styles.toggleLanguageButton}
             onClick={toggleLanguage}
