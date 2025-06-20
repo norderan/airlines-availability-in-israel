@@ -65,7 +65,7 @@ function Layout() {
       </header>
       <main>
         <div className={styles.mainContent}>
-          <AvailableAirlines />
+          <Outlet />
         </div>
       </main>
       <footer>

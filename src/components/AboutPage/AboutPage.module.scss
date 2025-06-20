@@ -1,0 +1,25 @@
+@use "../../styles/variables";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+  p {
+    color: var(--color-text-secondary);
+  }
+
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    a {
+      color: var(--color-text-primary);
+      &:hover {
+        color: var(--color-uniqe);
+      }
+    }
+  }
+}
