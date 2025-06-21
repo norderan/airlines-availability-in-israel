@@ -6,7 +6,7 @@
 $primary-hex: #b0e0e6;
 $secondary-hex: #007bff;
 $accent-hex: #c40048;
-$dark-primary-hex: #01262b;
+$dark-primary-hex: #000616;
 $dark-secondary-hex: #007bff;
 $dark-accent-hex: #c40048;
 
@@ -167,4 +167,9 @@ $dark-accent-hex: #c40048;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+@mixin logo() {
+  font-family: var(--font-family-h);
+  font-weight: 700;
 }
