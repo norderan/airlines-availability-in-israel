@@ -86,6 +86,15 @@
 
         white-space: nowrap; // Prevent wrapping for short text
       }
+      .unknown {
+        color: #ffa500;
+        text-shadow:
+          0 0 8px rgba(255, 165, 0, 0.7),
+          0 0 16px rgba(255, 140, 0, 0.4),
+          0 0 40px rgba(255, 140, 0, 0.3);
+
+        white-space: nowrap; // Prevent wrapping for short text
+      }
     }
 
     h3 {

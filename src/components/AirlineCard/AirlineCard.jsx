@@ -42,7 +42,6 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
         <div
           className={`${styles.cardHeader} ${isOpen ? styles.expanded : ""}`}
           onClick={onClick}
-          // ARIA attributes for accessibility
           aria-expanded={isOpen}
           aria-controls={`description-${text.name.replace(/\s+/g, "-")}`}
           role="button"
@@ -56,11 +55,15 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
           <h3 className={styles.headerTitle}>{text.name}</h3>{" "}
           <div className={styles.dateOverlay}>
             {airline.isAvailable === false ? (
-              <strong className={styles.returnDate}>
-                {airline.returnDate === null
-                  ? text.unknownReturnDate
-                  : dateProcessor(airline.returnDate, language)}
-              </strong>
+              airline.returnDate === null ? (
+                <strong className={styles.unknown}>
+                  {text.unknownReturnDate}
+                </strong>
+              ) : (
+                <strong className={styles.returnDate}>
+                  {dateProcessor(airline.returnDate, language)}
+                </strong>
+              )
             ) : (
               <strong className={styles.available}>{text.available}</strong>
             )}

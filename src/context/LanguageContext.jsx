@@ -6,11 +6,7 @@ export const LanguageContext = createContext(null);
 export const LanguageProvider = ({ children }) => {
   // For now, let's make language fixed at the provider level
   // You can change 'english' to 'hebrew' here directly for testing
-  const [language, setLanguage] = useState("english");
-
-  const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === "english" ? "hebrew" : "english"));
-  };
+  const [language, setLanguage] = useState("hebrew");
 
   const value = { language, setLanguage }; // Only provide language and its setter
 
