@@ -4,7 +4,39 @@
   direction: rtl;
   unicode-bidi: embed; /* Often used with direction: rtl; */
 }
+.hamburgerButton {
+  display: none; // Hidden by default on desktop
+  border: none;
+  z-index: 1001;
+  padding-top: 15px;
+  border-radius: 50px;
+}
 
+.mobileDarkmodeButton {
+  display: none; // Hidden by default on desktop
+  @include variables.buttonTheme();
+  border-radius: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1002;
+  width: 70px;
+  height: 70px;
+  padding-top: 15px;
+  * {
+    color: white;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -19,7 +51,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px;
     text-align: center;
     background: var(--color-primary-glass);
     border-radius: 16px;
@@ -27,6 +59,7 @@
     backdrop-filter: blur(6.2px);
     -webkit-backdrop-filter: blur(6.2px);
     margin-bottom: 20px;
+
     .logoContainer {
       display: flex;
       flex-direction: row;
@@ -39,7 +72,6 @@
       }
 
       svg {
-        //fill: var(--color-text-primary);
         fill: var(--color-text-primary);
         width: 48px;
         height: auto;
@@ -53,19 +85,11 @@
       button {
         margin: 0;
       }
-      ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        gap: 30px;
 
-        svg {
-          color: var(--color-text-primary);
-          &:hover {
-            color: var(--color-accent);
-          }
+      svg {
+        color: var(--color-text-primary);
+        &:hover {
+          color: var(--color-accent);
         }
       }
     }
@@ -107,5 +131,48 @@
       font-size: 0.9rem;
       margin: 0;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .themeToggleListItem {
+    display: none;
+  }
+  .mobileDarkmodeButton {
+    display: block;
+  }
+
+  /* Show Hamburger Button */
+  .hamburgerButton {
+    display: block; // Hidden by default on desktop
+  }
+  .mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+
+    opacity: 0; // Start hidden
+    visibility: hidden; // Hide from screen readers when closed
+
+    border-radius: 20px;
+    z-index: 999; // Below hamburger button, above content
+  }
+
+  /* State when Mobile Nav is Open */
+  .mainNav.navOpen {
+    opacity: 1; // Show
+    visibility: visible; // Make visible to screen readers
+  }
+
+  ul {
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    border-radius: 15px;
+    padding: 0 20px;
   }
 }

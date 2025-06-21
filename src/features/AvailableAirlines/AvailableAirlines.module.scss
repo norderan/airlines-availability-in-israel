@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px 0px 10px 0px;
+  gap: 30px;
   h1 {
     margin: 0;
   }
@@ -22,4 +23,21 @@
   justify-content: space-between;
   align-items: center;
   color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .accordionHeader {
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+  .accordionSubHeader {
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  .logoContainer svg {
+    width: 38px; // Adjust SVG size
+  }
 }

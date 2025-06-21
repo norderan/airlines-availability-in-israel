@@ -1,16 +1,18 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.scss";
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
-import { Home, Info } from "lucide-react";
+import { Home, Info, Menu, X } from "lucide-react";
 import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
 function Layout() {
   const { language, setLanguage } = useLanguage();
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleLanguage = () => {
     setLanguage((prevLang) => (prevLang === "english" ? "hebrew" : "english"));
   };
-
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
   const text = {
     availableAirlines:
       language === "english" ? "Available Airlines" : "חברות תעופה זמינות",
@@ -32,6 +34,9 @@ function Layout() {
         (language === "hebrew" ? ` ${styles.hebrewText}` : "")
       }
     >
+      <button className={styles.mobileDarkmodeButton}>
+        <ThemeToggleButton />
+      </button>
       <header>
         <div className={styles.logoContainer}>
           <svg
@@ -165,11 +170,21 @@ function Layout() {
 
           <h1>{text.title}</h1>
         </div>
-        <nav>
-          <ul>
+        <button
+          className={styles.hamburgerButton}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+        >
+          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+
+        <nav
+          className={`${styles.mainNav} ${isMenuOpen ? styles.navOpen : ""}`}
+        >
+          <ul id="main-navigation">
             <li>
-              {" "}
-              <Link to="/">
+              <Link to="/" onClick={handleLinkClick}>
                 <Home
                   className={styles.naveIcon}
                   size={32}
@@ -178,22 +193,25 @@ function Layout() {
               </Link>
             </li>
             <li>
-              <Link to="/about">
-                <Info
-                  className={styles.naveIcon}
-                  size={32}
-                  style={{ verticalAlign: "middle", marginRight: 4 }}
-                />
+              <Link to="/about" onClick={handleLinkClick}>
+                <Info className={styles.naveIcon} size={32} />
               </Link>
             </li>
+            <li className={styles.themeToggleListItem}>
+              <ThemeToggleButton />
+            </li>
+            <li>
+              <button
+                className={styles.toggleLanguageButton}
+                onClick={() => {
+                  toggleLanguage();
+                  handleLinkClick();
+                }} // Close menu on language toggle
+              >
+                {language === "english" ? "עברית" : "English"}
+              </button>
+            </li>
           </ul>
-          <ThemeToggleButton />
-          <button
-            className={styles.toggleLanguageButton}
-            onClick={toggleLanguage}
-          >
-            {language === "english" ? "עברית" : "English"}
-          </button>
         </nav>
       </header>
       <main>
