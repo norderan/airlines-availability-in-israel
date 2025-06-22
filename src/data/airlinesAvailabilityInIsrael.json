@@ -1,68 +1,131 @@
 [
   {
     "name": {
-      "english": "El Al Israel Airlines",
-      "hebrew": "אל על נתיבי אוויר לישראל"
+      "english": "El Al",
+      "hebrew": "אל על"
     },
     "isAvailable": true,
     "returnDate": null,
     "description": {
-      "english": "El Al is the flag carrier of Isragel, operating scheduled international and domestic services from its main base at Ben Gurion International Airport. Known for its stringent security procedures, it connects Israel with numerous destinations across Europe, Asia, Africa, and the Americas.",
-      "hebrew": "אל על היא חברת התעופה הלאומית של ישראל, המפעילה טיסות בינלאומיות ופנימיות סדירות מבסיסה הראשי בנמל התעופה בן-גוריון. היא ידועה בנהלי האבטחה המחמירים שלה, ומחברת את ישראל עם יעדים רבים באירופה, אסיה, אפריקה ואמריקה."
+      "english": "El Al, Israel's flag carrier, operates scheduled international/domestic flights from Ben Gurion Airport, known for stringent security. Actively operating and resuming flights for repatriation.",
+      "hebrew": "אל על, חברת התעופה הלאומית של ישראל, מפעילה טיסות בינלאומיות ופנימיות מנתב\"ג, ידועה באבטחתה המחמירה. פעילה ומחדשת טיסות לצורך חזרת אזרחים."
     },
     "website": "https://www.elal.com/",
     "primaryColor": "hsl(220, 40%, 30%)",
-    "image": "elal.avif",
     "secondaryColor": "hsl(44, 100%, 50%)",
-    "imageName": "elal.avif"
+    "imageName": "elal.webp"
   },
   {
     "name": {
-      "english": "Israir Airlines",
-      "hebrew": "ישראייר"
+      "english": "Arkia",
+      "hebrew": "ארקיע"
     },
     "isAvailable": true,
     "returnDate": null,
     "description": {
-      "english": "Israir is an Israeli airline operating domestic scheduled flights and international charter and scheduled services to destinations in Europe and Asia. It is Israel's second-largest airline and focuses on a low-cost model, offering flexible travel options.",
-      "hebrew": "ישראייר היא חברת תעופה ישראלית המפעילה טיסות פנים ארציות סדירות וטיסות שכר וסדירות בינלאומיות ליעדים באירופה ואסיה. זוהי חברת התעופה השנייה בגדלה בישראל, והיא מתמקדת במודל לואו-קוסט, המציעה אפשרויות נסיעה גמישות."
-    },
-    "website": "https://www.israir.co.il/",
-    "primaryColor": "hsl(28, 90%, 55%)",
-    "secondaryColor": "hsl(210, 60%, 35%)",
-    "imageName": "israir.jpg"
-  },
-  {
-    "name": {
-      "english": "Arkia Israeli Airlines",
-      "hebrew": "ארקיע נתיבי אוויר ישראליים"
-    },
-    "isAvailable": true,
-    "returnDate": null,
-    "description": {
-      "english": "Arkia is Israel's third-largest airline, providing scheduled domestic and international services, as well as charter flights to various destinations, primarily in Europe and the Mediterranean basin. It focuses on leisure and holiday travel.",
-      "hebrew": "ארקיע היא חברת התעופה השלישית בגדלה בישראל, המפעילה טיסות פנים ארציות ובינלאומיות סדירות, וכן טיסות שכר ליעדים שונים, בעיקר באירופה ובאגן הים התיכון. היא מתמקדת בטיולי פנאי וחופשות."
+      "english": "Arkia, Israel's third-largest airline, offers scheduled domestic/international and charter flights, primarily to Europe/Mediterranean. Resuming outbound flights to various destinations.",
+      "hebrew": "ארקיע, חברת התעופה השלישית בגודלה בישראל, מציעה טיסות סדירות וטיסות שכר, בעיקר לאירופה ולאגן הים התיכון. מחדשת טיסות יוצאות ליעדים שונים."
     },
     "website": "https://www.arkia.com/",
     "primaryColor": "hsl(196, 100%, 40%)",
     "secondaryColor": "hsl(30, 100%, 50%)",
-    "imageName": "arkia.jpg"
+    "imageName": "arkia.webp"
   },
   {
     "name": {
-      "english": "Wizz Air",
-      "hebrew": "וויז אייר"
+      "english": "Israir",
+      "hebrew": "ישראייר"
     },
     "isAvailable": false,
-    "returnDate": "31/08/2025",
+    "returnDate": "30/06/2025",
     "description": {
-      "english": "Wizz Air is a Hungarian ultra-low-cost airline that typically operates flights to Israel from various European cities. Due to ongoing regional developments, their flights to Tel Aviv are currently suspended with a tentative return date.",
-      "hebrew": "וויז אייר היא חברת תעופה הונגרית אולטרה-לואו-קוסט, שבדרך כלל מפעילה טיסות לישראל מערים אירופאיות שונות. עקב התפתחויות אזוריות מתמשכות, טיסותיה לתל אביב מושעיות כרגע עם תאריך חזרה משוער."
+      "english": "Israir, Israel's second-largest airline, operates domestic flights and international charter/scheduled services. Flights cancelled until end of June.",
+      "hebrew": "ישראייר, חברת התעופה השנייה בגודלה בישראל, מפעילה טיסות פנים וטיסות שכר/סדירות בינלאומיות. טיסות מבוטלות עד סוף יוני."
     },
-    "website": "https://wizzair.com/",
-    "primaryColor": "hsl(320, 70%, 40%)",
-    "secondaryColor": "hsl(210, 80%, 50%)",
-    "imageName": "wizz.jpg"
+    "website": "https://www.israir.co.il/",
+    "primaryColor": "hsl(28, 90%, 55%)",
+    "secondaryColor": "hsl(210, 60%, 35%)",
+    "imageName": "israir.webp"
+  },
+  {
+    "name": {
+      "english": "Air Haifa",
+      "hebrew": "אייר חיפה"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Air Haifa, a newer Israeli airline, focuses on domestic/regional flights. Terminated flights to TLV; primary hub is Haifa Airport.",
+      "hebrew": "אייר חיפה, חברת תעופה ישראלית חדשה, מתמקדת בטיסות פנים-ארציות ואזוריות. הפסיקה טיסות לתל אביב; הבסיס העיקרי הוא נמל התעופה חיפה."
+    },
+    "website": "https://www.airhaifa.co.il/",
+    "primaryColor": "hsl(160, 50%, 40%)",
+    "secondaryColor": "hsl(200, 30%, 80%)",
+    "imageName": "airhaifa.webp"
+  },
+  {
+    "name": {
+      "english": "United Airlines",
+      "hebrew": "יונייטד איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": "01/08/2025",
+    "description": {
+      "english": "United Airlines, a major US carrier, typically offers direct US-Israel flights. Flights suspended from Newark until August 1.",
+      "hebrew": "יונייטד איירליינס, חברת תעופה אמריקאית גדולה, מציעה בדרך כלל טיסות ישירות בין ארה\"ב לישראל. טיסות מניוארק מושעות עד 1 באוגוסט."
+    },
+    "website": "https://www.united.com/",
+    "primaryColor": "hsl(210, 100%, 30%)",
+    "secondaryColor": "hsl(210, 30%, 80%)",
+    "imageName": "united.webp"
+  },
+  {
+    "name": {
+      "english": "Delta Air Lines",
+      "hebrew": "דלתא איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Delta Air Lines, a major US airline, offers extensive international/domestic routes. Resumed direct flights to Tel Aviv.",
+      "hebrew": "דלתא איירליינס, אחת מחברות התעופה הגדולות בארה\"ב, מציעה מגוון רחב של קווים בינלאומיים ופנימיים. חידשה טיסות ישירות לתל אביב."
+    },
+    "website": "https://www.delta.com/",
+    "primaryColor": "hsl(0, 70%, 40%)",
+    "secondaryColor": "hsl(220, 10%, 90%)",
+    "imageName": "delta.webp"
+  },
+  {
+    "name": {
+      "english": "Air Canada",
+      "hebrew": "אייר קנדה"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Air Canada, Canada's flag carrier, usually offers direct flights between Canadian cities and Tel Aviv. Services suspended, no confirmed return date.",
+      "hebrew": "אייר קנדה, חברת התעופה הלאומית של קנדה, מציעה בדרך כלל טיסות ישירות בין ערים קנדיות לתל אביב. השירותים מושעים, אין תאריך חזרה מאושר."
+    },
+    "website": "https://www.aircanada.com/",
+    "primaryColor": "hsl(0, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "aircanada.webp"
+  },
+  {
+    "name": {
+      "english": "American Airlines",
+      "hebrew": "אמריקן איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "American Airlines, a major US airline, has operated flights to Israel. Current operations suspended indefinitely.",
+      "hebrew": "אמריקן איירליינס, חברת תעופה אמריקאית גדולה, הפעילה בעבר טיסות לישראל. פעילותה הנוכחית מושעית ללא הגבלת זמן."
+    },
+    "website": "https://www.aa.com/",
+    "primaryColor": "hsl(2, 80%, 45%)",
+    "secondaryColor": "hsl(220, 100%, 70%)",
+    "imageName": "american.webp"
   },
   {
     "name": {
@@ -72,29 +135,45 @@
     "isAvailable": false,
     "returnDate": "31/07/2025",
     "description": {
-      "english": "Lufthansa is the largest German airline and typically offers frequent connections to Israel from major German cities and beyond. Their operations to Tel Aviv have been significantly impacted by security concerns.",
-      "hebrew": "לופטהנזה היא חברת התעופה הגרמנית הגדולה ביותר ובדרך כלל מציעה טיסות תכופות לישראל מערים גרמניות מרכזיות ומחוצה להן. פעילותה לתל אביב הושפעה באופן משמעותי בשל חששות ביטחוניים."
+      "english": "Lufthansa, Germany's largest airline, usually offers frequent connections to Israel. Operations impacted by security concerns, suspended until end of July.",
+      "hebrew": "לופטהנזה, חברת התעופה הגדולה בגרמניה, מציעה בדרך כלל קשרים תכופים לישראל. הפעילות הושפעה מחששות ביטחוניים, מושעית עד סוף יולי."
     },
     "website": "https://www.lufthansa.com/",
     "primaryColor": "hsl(220, 60%, 25%)",
     "secondaryColor": "hsl(44, 100%, 50%)",
-    "imageName": "lufthansa.jpg"
+    "imageName": "lufthansa.webp"
   },
   {
     "name": {
-      "english": "Turkish Airlines",
-      "hebrew": "טורקיש איירליינס"
+      "english": "SWISS Air Lines",
+      "hebrew": "סוויס איירליינס"
     },
     "isAvailable": false,
-    "returnDate": null,
+    "returnDate": "31/07/2025",
     "description": {
-      "english": "Turkish Airlines, the national flag carrier airline of Turkey, usually has a strong presence in the Israeli market, connecting passengers through its Istanbul hub to a vast global network. Current flight status is uncertain.",
-      "hebrew": "טורקיש איירליינס, חברת התעופה הלאומית של טורקיה, בדרך כלל בעלת נוכחות חזקה בשוק הישראלי, ומחברת נוסעים דרך מרכז איסטנבול שלה לרשת עולמית עצומה. סטטוס הטיסות הנוכחי אינו ודאי."
+      "english": "SWISS, Switzerland's flag carrier and Lufthansa Group member, usually provides direct flights from Zurich/Geneva to Tel Aviv. Flights suspended until end of July.",
+      "hebrew": "סוויס, חברת התעופה הלאומית של שוויץ וחברה בקבוצת לופטהנזה, מפעילה בדרך כלל טיסות ישירות מציריך/ז'נבה לתל אביב. טיסות מושעיות עד סוף יולי."
     },
-    "website": "https://www.turkishairlines.com/",
+    "website": "https://www.swiss.com/",
+    "primaryColor": "hsl(0, 0%, 0%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "swiss.webp"
+  },
+  {
+    "name": {
+      "english": "Austrian Airlines",
+      "hebrew": "אוסטריאן איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": "31/07/2025",
+    "description": {
+      "english": "Austrian Airlines, a Lufthansa Group subsidiary, typically connects Vienna with Tel Aviv. Flights suspended until end of July.",
+      "hebrew": "אוסטריאן איירליינס, חברה בת של קבוצת לופטהנזה, מחברת בדרך כלל את וינה עם תל אביב. טיסות מושעיות עד סוף יולי."
+    },
+    "website": "https://www.austrian.com/",
     "primaryColor": "hsl(0, 80%, 40%)",
     "secondaryColor": "hsl(0, 0%, 100%)",
-    "imageName": "turkish.jpg"
+    "imageName": "austrian.webp"
   },
   {
     "name": {
@@ -104,8 +183,8 @@
     "isAvailable": false,
     "returnDate": "31/07/2025",
     "description": {
-      "english": "British Airways is the flag carrier airline of the United Kingdom, known its premium services. It typically operates direct flights between London and Tel Aviv. Flights are currently suspended.",
-      "hebrew": "בריטיש איירווייז היא חברת התעופה הלאומית של הממלכה המאוחדת, הידועה בשירותי הפרימיום שלה. היא מפעילה בדרך כלל טיסות ישירות בין לונדון לתל אביב. הטיסות מושעות כעת."
+      "english": "British Airways, UK's flag carrier, operates direct London-Tel Aviv flights. Flights suspended until late July.",
+      "hebrew": "בריטיש איירווייז, חברת התעופה הלאומית של בריטניה, מפעילה טיסות ישירות בין לונדון לתל אביב. טיסות מושעות עד סוף יולי."
     },
     "website": "https://www.britishairways.com/",
     "primaryColor": "hsl(220, 80%, 30%)",
@@ -114,19 +193,115 @@
   },
   {
     "name": {
-      "english": "EasyJet",
+      "english": "Air France",
+      "hebrew": "אייר פראנס"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Air France, France's flag carrier, offers regular Paris-Tel Aviv flights. Services suspended indefinitely.",
+      "hebrew": "אייר פראנס, חברת התעופה הלאומית של צרפת, מציעה טיסות סדירות מפריז לתל אביב. השירותים מושעים ללא הגבלת זמן."
+    },
+    "website": "https://www.airfrance.com/",
+    "primaryColor": "hsl(220, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "airfrance.webp"
+  },
+  {
+    "name": {
+      "english": "KLM Royal Dutch Airlines",
+      "hebrew": "ק.ל.מ. רויאל דאץ' איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": "01/07/2025",
+    "description": {
+      "english": "KLM, Netherlands' flag carrier, provides direct Amsterdam-Tel Aviv flights. Flights cancelled until early July.",
+      "hebrew": "ק.ל.מ., חברת התעופה הלאומית של הולנד, מספקת טיסות ישירות מאמסטרדם לתל אביב. טיסות מבוטלות עד תחילת יולי."
+    },
+    "website": "https://www.klm.com/",
+    "primaryColor": "hsl(220, 80%, 50%)",
+    "secondaryColor": "hsl(40, 100%, 70%)",
+    "imageName": "klm.webp"
+  },
+  {
+    "name": {
+      "english": "ITA Airways",
+      "hebrew": "איתא איירווייז"
+    },
+    "isAvailable": false,
+    "returnDate": "31/07/2025",
+    "description": {
+      "english": "ITA Airways, Italy's state-owned flag carrier, maintains Rome-Tel Aviv flights. Suspension extended until end of July.",
+      "hebrew": "אית'א איירווייז, חברת התעופה הלאומית של איטליה, מקיימת טיסות רומא-תל אביב. ההשעיה הוארכה עד סוף יולי."
+    },
+    "website": "https://www.ita-airways.com/",
+    "primaryColor": "hsl(200, 80%, 40%)",
+    "secondaryColor": "hsl(100, 50%, 60%)",
+    "imageName": "ita.webp"
+  },
+  {
+    "name": {
+      "english": "LOT Polish Airlines",
+      "hebrew": "לוט פוליש איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "LOT Polish Airlines, Poland's flag carrier, offers direct Warsaw/Krakow-Tel Aviv flights. Operations resumed.",
+      "hebrew": "לוט פוליש איירליינס, חברת התעופה הלאומית של פולין, מציעה טיסות ישירות ורשה/קרקוב-תל אביב. הפעילות חודשה."
+    },
+    "website": "https://www.lot.com/",
+    "primaryColor": "hsl(220, 70%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "lot.webp"
+  },
+  {
+    "name": {
+      "english": "Aegean Airlines",
+      "hebrew": "אייג'יאן איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": "12/07/2025",
+    "description": {
+      "english": "Aegean Airlines, Greece's flag carrier, offers frequent connections from Greek cities to Tel Aviv. Flights currently suspended, planned resumption mid-July.",
+      "hebrew": "אייג'יאן איירליינס, חברת התעופה הלאומית של יוון, מציעה חיבורים תכופים מיוון לתל אביב. טיסות מושעיות כעת, חידוש מתוכנן באמצע יולי."
+    },
+    "website": "https://en.aegeanair.com/",
+    "primaryColor": "hsl(210, 80%, 30%)",
+    "secondaryColor": "hsl(40, 100%, 50%)",
+    "imageName": "aegean.webp"
+  },
+  {
+    "name": {
+      "english": "Wizz Air",
+      "hebrew": "וויז אייר"
+    },
+    "isAvailable": false,
+    "returnDate": "15/09/2025",
+    "description": {
+      "english": "Wizz Air, a Hungarian ultra-low-cost airline, typically operates flights to Israel from Europe. Flights suspended until mid-September.",
+      "hebrew": "וויז אייר, חברת תעופה הונגרית אולטרה-לואו-קוסט, מפעילה בדרך כלל טיסות לישראל מאירופה. טיסות מושעיות עד אמצע ספטמבר."
+    },
+    "website": "https://wizzair.com/",
+    "primaryColor": "hsl(320, 70%, 40%)",
+    "secondaryColor": "hsl(210, 80%, 50%)",
+    "imageName": "wizz.webp"
+  },
+  {
+    "name": {
+      "english": "easyJet",
       "hebrew": "איזיג'ט"
     },
     "isAvailable": false,
     "returnDate": "30/06/2025",
     "description": {
-      "english": "EasyJet is a British low-cost airline group that frequently operates flights to Israel from various European destinations. Their return to Israel has been postponed multiple times.",
-      "hebrew": "איזיג'ט היא קבוצת תעופה בריטית בעלות נמוכה, המפעילה לעיתים קרובות טיסות לישראל מיעדים אירופאיים שונים. חזרתם לישראל נדחתה מספר פעמים."
+      "english": "EasyJet, a British low-cost airline, frequently operates flights to Israel from Europe. Return postponed, expected end of June.",
+      "hebrew": "איזיג'ט, חברת תעופה בריטית בעלות נמוכה, מפעילה לעיתים קרובות טיסות לישראל מאירופה. החזרה נדחתה, צפויה בסוף יוני."
     },
     "website": "https://www.easyjet.com/",
     "primaryColor": "hsl(28, 100%, 50%)",
     "secondaryColor": "hsl(0, 0%, 100%)",
-    "imageName": "easyjet.jpeg"
+    "imageName": "easyjet.webp"
   },
   {
     "name": {
@@ -134,30 +309,414 @@
       "hebrew": "ריינאייר"
     },
     "isAvailable": false,
-    "returnDate": "31/08/2025",
+    "returnDate": null,
     "description": {
-      "english": "Ryanair, an Irish ultra-low-cost airline, is a significant player in the European market and typically offers many budget-friendly routes to Israel. Their operations remain suspended for an extended period.",
-      "hebrew": "ריינאייר, חברת תעופה אירית אולטרה-לואו-קוסט, היא שחקן משמעותי בשוק האירופי ובדרך כלל מציעה מסלולים רבים וזולים לישראל. פעילותה נותרה מושעית לפרק זמן ממושך."
+      "english": "Ryanair, an Irish ultra-low-cost airline, offers budget-friendly routes to Israel. Operations remain suspended.",
+      "hebrew": "ריינאייר, חברת תעופה אירית אולטרה-לואו-קוסט, מציעה מסלולים זולים לישראל. הפעילות נותרה מושעית."
     },
     "website": "https://www.ryanair.com/",
     "primaryColor": "hsl(220, 80%, 30%)",
     "secondaryColor": "hsl(48, 100%, 50%)",
-    "imageName": "ryanair.jpg"
+    "imageName": "ryanair.webp"
   },
   {
     "name": {
-      "english": "United Airlines",
-      "hebrew": "יונייטד איירליינס"
+      "english": "Turkish Airlines",
+      "hebrew": "טורקיש איירליינס"
     },
     "isAvailable": false,
-    "returnDate": "01/09/2025",
+    "returnDate": null,
     "description": {
-      "english": "United Airlines, a major US carrier, usually provides direct flights between the United States and Israel. Their return to the Israeli market has been significantly delayed.",
-      "hebrew": "יונייטד איירליינס, חברת תעופה אמריקאית גדולה, בדרך כלל מספקת טיסות ישירות בין ארצות הברית לישראל. חזרתה לשוק הישראלי התעכבה באופן משמעותי."
+      "english": "Turkish Airlines, Turkey's flag carrier, has a strong presence in the Israeli market. TLV operations affected by regional tensions.",
+      "hebrew": "טורקיש איירליינס, חברת התעופה הלאומית של טורקיה, בעלת נוכחות חזקה בשוק הישראלי. פעילותה לתל אביב מושפעת מהמתחים האזוריים."
     },
-    "website": "https://www.united.com/",
-    "primaryColor": "hsl(210, 100%, 30%)",
-    "secondaryColor": "hsl(210, 30%, 80%)",
-    "imageName": "united.webp"
+    "website": "https://www.turkishairlines.com/",
+    "primaryColor": "hsl(0, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "turkish.webp"
+  },
+  {
+    "name": {
+      "english": "Brussels Airlines",
+      "hebrew": "בריסל איירליינס"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Brussels Airlines, Belgium's flag carrier and Lufthansa Group member, operates direct Brussels-Tel Aviv flights. Services suspended, expected mid-July return.",
+      "hebrew": "בריסל איירליינס, חברת התעופה הלאומית של בלגיה וחברה בקבוצת לופטהנזה, מפעילה טיסות ישירות בריסל-תל אביב. השירותים מושעים, חזרה צפויה באמצע יולי."
+    },
+    "website": "https://www.brusselsairlines.com/",
+    "primaryColor": "hsl(220, 60%, 40%)",
+    "secondaryColor": "hsl(220, 0%, 100%)",
+    "imageName": "brussels.webp"
+  },
+  {
+    "name": {
+      "english": "Eurowings",
+      "hebrew": "יורווינגס"
+    },
+    "isAvailable": false,
+    "returnDate": "31/07/2025",
+    "description": {
+      "english": "Eurowings, a German low-cost airline and Lufthansa Group subsidiary, operates flights to Tel Aviv. Flights suspended until end of July.",
+      "hebrew": "יורווינגס, חברת תעופה גרמנית בעלות נמוכה וחברה בת של קבוצת לופטהנזה, מפעילה טיסות לתל אביב. טיסות מושעיות עד סוף יולי."
+    },
+    "website": "https://www.eurowings.com/",
+    "primaryColor": "hsl(220, 60%, 25%)",
+    "secondaryColor": "hsl(40, 100%, 50%)",
+    "imageName": "eurowings.webp"
+  },
+  {
+    "name": {
+      "english": "TAP Air Portugal",
+      "hebrew": "טאפ אייר פורטוגל"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "TAP Air Portugal, Portugal's national airline, usually connects Lisbon with Tel Aviv. Flights currently suspended indefinitely.",
+      "hebrew": "טאפ אייר פורטוגל, חברת התעופה הלאומית של פורטוגל, מחברת בדרך כלל את ליסבון עם תל אביב. טיסות מושעיות כרגע ללא הגבלת זמן."
+    },
+    "website": "https://www.flytap.com/",
+    "primaryColor": "hsl(0, 80%, 45%)",
+    "secondaryColor": "hsl(220, 100%, 70%)",
+    "imageName": "tap.webp"
+  },
+  {
+    "name": {
+      "english": "Bluebird Airways",
+      "hebrew": "בלובירד איירווייז"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Bluebird Airways, a Greek airline, offers flights connecting Greece/Mediterranean to Tel Aviv. Flights cancelled until end of June, early July bookings closed.",
+      "hebrew": "בלובירד איירווייז, חברת תעופה יוונית, מציעה טיסות המחברות את יוון/אגן הים התיכון לתל אביב. טיסות מבוטלות עד סוף יוני, הזמנות לתחילת יולי סגורות."
+    },
+    "website": "https://www.bluebirdair.com/",
+    "primaryColor": "hsl(210, 70%, 40%)",
+    "secondaryColor": "hsl(40, 100%, 60%)",
+    "imageName": "bluebird.webp"
+  },
+  {
+    "name": {
+      "english": "TUS Airways",
+      "hebrew": "טאס איירווייז"
+    },
+    "isAvailable": false,
+    "returnDate": "24/06/2025",
+    "description": {
+      "english": "TUS Airways, a Cypriot airline, offers scheduled/charter flights to Europe/Middle East, including Tel Aviv. Flights cancelled until June 24, with bookings closed for rest of June.",
+      "hebrew": "טאס איירווייז, חברת תעופה קפריסאית, מציעה טיסות סדירות וטיסות שכר לאירופה/מזרח התיכון, כולל תל אביב. טיסות מבוטלות עד 24 ביוני, עם סגירת הזמנות לשארית יוני."
+    },
+    "website": "https://www.tusairways.com/",
+    "primaryColor": "hsl(180, 80%, 30%)",
+    "secondaryColor": "hsl(40, 100%, 50%)",
+    "imageName": "TUS.webp"
+  },
+  {
+    "name": {
+      "english": "Air Europa",
+      "hebrew": "אייר אירופה"
+    },
+    "isAvailable": false,
+    "returnDate": "31/07/2025",
+    "description": {
+      "english": "Air Europa, a Spanish airline, typically offers direct Madrid-Tel Aviv flights. Flights halted until end of July.",
+      "hebrew": "אייר אירופה, חברת תעופה ספרדית, מציעה בדרך כלל טיסות ישירות מדריד-תל אביב. טיסות הושעו עד סוף יולי."
+    },
+    "website": "https://www.aireuropa.com/",
+    "primaryColor": "hsl(220, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "aireuropa.webp"
+  },
+  {
+    "name": {
+      "english": "Air Baltic",
+      "hebrew": "אייר בלטיק"
+    },
+    "isAvailable": false,
+    "returnDate": "23/06/2025",
+    "description": {
+      "english": "Air Baltic, Latvia's flag carrier, connects the Baltics/Northern Europe to Tel Aviv. Flights suspended until tomorrow, June 23.",
+      "hebrew": "אייר בלטיק, חברת התעופה הלאומית של לטביה, מחברת את הבלטיות/צפון אירופה לתל אביב. טיסות מושעיות עד מחר, 23 ביוני."
+    },
+    "website": "https://www.airbaltic.com/",
+    "primaryColor": "hsl(100, 50%, 40%)",
+    "secondaryColor": "hsl(40, 100%, 60%)",
+    "imageName": "airbaltic.webp"
+  },
+  {
+    "name": {
+      "english": "Finnair",
+      "hebrew": "פינאייר"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Finnair, Finland's flag carrier, operates Helsinki-Tel Aviv flights. Known for Europe-Asia connections.",
+      "hebrew": "פינאייר, חברת התעופה הלאומית של פינלנד, מפעילה טיסות הלסינקי-תל אביב. ידועה בקשרים בין אירופה לאסיה."
+    },
+    "website": "https://www.finnair.com/",
+    "primaryColor": "hsl(220, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "finnair.webp"
+  },
+  {
+    "name": {
+      "english": "Vueling Airlines",
+      "hebrew": "וולינג איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Vueling Airlines, a Spanish low-cost airline, serves European/Mediterranean destinations, including Tel Aviv. Currently operational.",
+      "hebrew": "וולינג איירליינס, חברת תעופה ספרדית בעלות נמוכה, משרתת יעדים אירופאים וים תיכוניים, כולל תל אביב. פועלים כרגע."
+    },
+    "website": "https://www.vueling.com/",
+    "primaryColor": "hsl(220, 60%, 45%)",
+    "secondaryColor": "hsl(40, 100%, 60%)",
+    "imageName": "vueling.webp"
+  },
+  {
+    "name": {
+      "english": "Ethiopian Airlines",
+      "hebrew": "אתיופיאן איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Ethiopian Airlines, Ethiopia's flag carrier, provides extensive connections across continents, including regular flights to Tel Aviv. Maintains multiple weekly rotations.",
+      "hebrew": "אתיופיאן איירליינס, חברת התעופה הלאומית של אתיופיה, מספקת קשרים ענפים בין יבשות, כולל טיסות סדירות לתל אביב. מקיימת מספר טיסות שבועיות."
+    },
+    "website": "https://www.ethiopianairlines.com/",
+    "primaryColor": "hsl(40, 100%, 50%)",
+    "secondaryColor": "hsl(120, 60%, 40%)",
+    "imageName": "Ethiopian.webp"
+  },
+  {
+    "name": {
+      "english": "Emirates",
+      "hebrew": "אמירטס"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Emirates, a flag carrier of UAE, usually offers daily Dubai-Tel Aviv direct flights. Flights suspended with no specific return date.",
+      "hebrew": "אמירטס, חברת תעופה מובילה מאיחוד האמירויות, מציעה בדרך כלל טיסות יומיות ישירות דובאי-תל אביב. טיסות מושעיות ללא תאריך חזרה ספציפי."
+    },
+    "website": "https://www.emirates.com/",
+    "primaryColor": "hsl(0, 80%, 30%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "emirates.webp"
+  },
+  {
+    "name": {
+      "english": "Flydubai",
+      "hebrew": "פליידובאי"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Flydubai, a low-cost airline from Dubai, operates frequent direct Dubai-Tel Aviv flights. Flights suspended, no specific return date.",
+      "hebrew": "פליידובאי, חברת תעופה בעלות נמוכה מדובאי, מפעילה טיסות ישירות תכופות דובאי-תל אביב. טיסות מושעיות, ללא תאריך חזרה ספציפי."
+    },
+    "website": "https://www.flydubai.com/",
+    "primaryColor": "hsl(210, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "flydubai.webp"
+  },
+  {
+    "name": {
+      "english": "Etihad Airways",
+      "hebrew": "איתיחאד איירווייז"
+    },
+    "isAvailable": false,
+    "returnDate": null,
+    "description": {
+      "english": "Etihad Airways, a flag carrier of UAE, operates daily Abu Dhabi-Tel Aviv direct flights. Flights suspended with no specific return date.",
+      "hebrew": "איתיחאד איירווייז, חברת תעופה מובילה מאיחוד האמירויות, מפעילה טיסות יומיות ישירות אבו דאבי-תל אביב. טיסות מושעיות ללא תאריך חזרה ספציפי."
+    },
+    "website": "https://www.etihad.com/",
+    "primaryColor": "hsl(160, 70%, 25%)",
+    "secondaryColor": "hsl(200, 10%, 90%)",
+    "imageName": "etihad.webp"
+  },
+  {
+    "name": {
+      "english": "Royal Jordanian",
+      "hebrew": "רויאל ג'ורדניאן"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Royal Jordanian, Jordan's flag carrier, offers frequent Amman-Tel Aviv direct flights, serving as an important regional connection.",
+      "hebrew": "רויאל ג'ורדניאן, חברת התעופה הלאומית של ירדן, מציעה טיסות ישירות תכופות עמאן-תל אביב, ומשמשת כחיבור אזורי חשוב."
+    },
+    "website": "https://www.rj.com/",
+    "primaryColor": "hsl(200, 80%, 30%)",
+    "secondaryColor": "hsl(40, 100%, 60%)",
+    "imageName": "jordanian.webp"
+  },
+  {
+    "name": {
+      "english": "Azerbaijan Airlines",
+      "hebrew": "אזרבייג'ן איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Azerbaijan Airlines (AZAL), Azerbaijan's flag carrier, provides direct Baku-Tel Aviv flights. Flights were cancelled on specific dates in mid-June; monitoring for changes.",
+      "hebrew": "אזרבייג'ן איירליינס (AZAL), חברת התעופה הלאומית של אזרבייג'ן, מפעילה טיסות ישירות באקו-תל אביב. טיסות בוטלו בתאריכים ספציפיים באמצע יוני; מעקב אחר שינויים."
+    },
+    "website": "https://www.azal.az/",
+    "primaryColor": "hsl(220, 60%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "azerbaijan.webp"
+  },
+  {
+    "name": {
+      "english": "Air India",
+      "hebrew": "אייר אינדיה"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Air India, India's flag carrier, offers direct New Delhi-Tel Aviv flights. Services to Israel resumed.",
+      "hebrew": "אייר אינדיה, חברת התעופה הלאומית של הודו, מציעה טיסות ישירות ניו דלהי-תל אביב. השירותים לישראל חודשו."
+    },
+    "website": "https://www.airindia.com/",
+    "primaryColor": "hsl(0, 80%, 40%)",
+    "secondaryColor": "hsl(40, 100%, 50%)",
+    "imageName": "airindia.webp"
+  },
+  {
+    "name": {
+      "english": "Cathay Pacific",
+      "hebrew": "קת'אי פסיפיק"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Cathay Pacific, Hong Kong's flag carrier, provides direct Hong Kong-Tel Aviv flights. A major airline for Asia/global connections.",
+      "hebrew": "קת'אי פסיפיק, חברת התעופה הלאומית של הונג קונג, מפעילה טיסות ישירות הונג קונג-תל אביב. חברת תעופה מרכזית לחיבורים באסיה ובעולם."
+    },
+    "website": "https://www.cathaypacific.com/",
+    "primaryColor": "hsl(140, 50%, 30%)",
+    "secondaryColor": "hsl(200, 10%, 90%)",
+    "imageName": "cathay.webp"
+  },
+  {
+    "name": {
+      "english": "Hainan Airlines",
+      "hebrew": "היינאן איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Hainan Airlines, a major Chinese airline, typically operates direct flights between Chinese cities (e.g., Beijing, Shanghai) and Tel Aviv. One of China's largest.",
+      "hebrew": "היינאן איירליינס, חברת תעופה סינית גדולה, מפעילה בדרך כלל טיסות ישירות בין ערים סיניות (כמו בייג'ינג, שנחאי) לתל אביב. אחת מחברות התעופה הגדולות בסין."
+    },
+    "website": "https://global.hnair.com/",
+    "primaryColor": "hsl(0, 80%, 40%)",
+    "secondaryColor": "hsl(0, 0%, 100%)",
+    "imageName": "hainan.webp"
+  },
+  {
+    "name": {
+      "english": "Uzbekistan Airways",
+      "hebrew": "אוזבקיסטן איירווייז"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Uzbekistan Airways, Uzbekistan's flag carrier, provides direct Tashkent-Tel Aviv flights, connecting Central Asia with Israel. Currently operational.",
+      "hebrew": "אוזבקיסטן איירווייז, חברת התעופה הלאומית של אוזבקיסטן, מפעילה טיסות ישירות טשקנט-תל אביב, ומחברת את מרכז אסיה עם ישראל. פועלים כרגע."
+    },
+    "website": "https://www.uzairways.com/",
+    "primaryColor": "hsl(220, 70%, 40%)",
+    "secondaryColor": "hsl(120, 60%, 50%)",
+    "imageName": "uzbekistan.webp"
+  },
+  {
+    "name": {
+      "english": "AeroMexico",
+      "hebrew": "אארומקסיקו"
+    },
+    "isAvailable": false,
+    "returnDate": "13/07/2025",
+    "description": {
+      "english": "AeroMexico, Mexico's flag carrier, offers seasonal direct Mexico City-Tel Aviv flights. Flights affected by cancellations until mid-July.",
+      "hebrew": "אארומקסיקו, חברת התעופה הלאומית של מקסיקו, מציעה טיסות ישירות עונתיות מקסיקו סיטי-תל אביב. טיסות מושפעות מביטולים עד אמצע יולי."
+    },
+    "website": "https://aeromexico.com/",
+    "primaryColor": "hsl(0, 80%, 40%)",
+    "secondaryColor": "hsl(10, 100%, 70%)",
+    "imageName": "aeromexico.webp"
+  },
+  {
+    "name": {
+      "english": "Transavia",
+      "hebrew": "טרנסאוויה"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Transavia, a Dutch low-cost airline (Air France–KLM group), operates flights from Europe to Tel Aviv. Transavia France relaunched services.",
+      "hebrew": "טרנסאוויה, חברת תעופה הולנדית בעלות נמוכה (קבוצת אייר פראנס-ק.ל.מ.), מפעילה טיסות מאירופה לתל אביב. טרנסאוויה צרפת חידשה את שירותיה."
+    },
+    "website": "https://www.transavia.com/",
+    "primaryColor": "hsl(30, 100%, 50%)",
+    "secondaryColor": "hsl(220, 0%, 100%)",
+    "imageName": "transavia.webp"
+  },
+  {
+    "name": {
+      "english": "Smartwings",
+      "hebrew": "סמארטווינגס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Smartwings, Czech low-cost and largest airline, operates frequent flights to Tel Aviv from Prague/Europe. Resumed flights since May 26.",
+      "hebrew": "סמארטווינגס, חברת תעופה צ'כית בעלות נמוכה והגדולה ביותר, מפעילה טיסות תכופות לתל אביב מפראג/אירופה. חידשה טיסות מאז 26 במאי."
+    },
+    "website": "https://www.smartwings.com/",
+    "primaryColor": "hsl(210, 80%, 30%)",
+    "secondaryColor": "hsl(120, 60%, 50%)",
+    "imageName": "smartwings.webp"
+  },
+  {
+    "name": {
+      "english": "Corendon Airlines",
+      "hebrew": "קורנדון איירליינס"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Corendon Airlines, a Turkish leisure airline, offers flights from Europe to holiday destinations, including Tel Aviv. Maintains active flight routes.",
+      "hebrew": "קורנדון איירליינס, חברת תעופה טורקית לנופש, מציעה טיסות מאירופה ליעדי נופש, כולל תל אביב. מקיימת קווי טיסה פעילים."
+    },
+    "website": "https://www.corendonairlines.com/",
+    "primaryColor": "hsl(180, 80%, 30%)",
+    "secondaryColor": "hsl(40, 100%, 50%)",
+    "imageName": "corendon.webp"
+  },
+  {
+    "name": {
+      "english": "Air Malta",
+      "hebrew": "אייר מלטה"
+    },
+    "isAvailable": true,
+    "returnDate": null,
+    "description": {
+      "english": "Air Malta, Malta's national airline, connects Malta to European/Mediterranean destinations, including Tel Aviv. Currently operational.",
+      "hebrew": "אייר מלטה, חברת התעופה הלאומית של מלטה, מחברת את מלטה ליעדים אירופאים וים תיכוניים, כולל תל אביב. פועלים כרגע."
+    },
+    "website": "https://www.airmalta.com/",
+    "primaryColor": "hsl(200, 70%, 40%)",
+    "secondaryColor": "hsl(40, 100%, 50%)",
+    "imageName": "airmalta.webp"
   }
 ]
