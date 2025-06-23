@@ -29,7 +29,7 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
     <div
       className={styles.expandableCard}
       style={{
-        "--background-image-url": `url(/src/assets/images/airplane-images/${airline.imageName})`,
+        "--background-image-url": `url(/airline-images/${airline.imageName})`,
       }}
     >
       <div

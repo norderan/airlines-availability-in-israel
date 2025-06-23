@@ -2,6 +2,8 @@
 
 SkyTLV is a **React web application** designed to provide real-time information on airline flight availability to **Ben Gurion Airport (TLV)** in Israel. In times of regional unrest, it highlights the impact on air travel, clearly showing which airlines are operating and which have suspended flights.
 
+See [demo](https://skytlv.netlify.app/)
+
 ## ✨ Features
 
 - **Flight Status:** See at a glance which airlines are available and which have halted operations.
