@@ -109,7 +109,8 @@
     "imageName": "airhaifa.webp",
     "primaryColor": "hsl(160, 50%, 40%)",
     "secondaryColor": "hsl(200, 30%, 80%)",
-    "website": "https://www.airhaifa.co.il/"
+    "website": "https://www.airhaifa.co.il/",
+    "isIsraeli": true
   },
   {
     "name": {
@@ -173,7 +174,8 @@
     "imageName": "arkia.webp",
     "primaryColor": "hsl(196, 100%, 40%)",
     "secondaryColor": "hsl(30, 100%, 50%)",
-    "website": "https://www.arkia.com/"
+    "website": "https://www.arkia.com/",
+    "isIsraeli": true
   },
   {
     "name": {
@@ -333,7 +335,8 @@
     "imageName": "elal.webp",
     "primaryColor": "hsl(220, 40%, 30%)",
     "secondaryColor": "hsl(44, 100%, 50%)",
-    "website": "https://www.elal.com/"
+    "website": "https://www.elal.com/",
+    "isIsraeli": true
   },
   {
     "name": {
@@ -477,7 +480,8 @@
     "imageName": "israir.webp",
     "primaryColor": "hsl(28, 90%, 55%)",
     "secondaryColor": "hsl(210, 60%, 35%)",
-    "website": "https://www.israir.co.il/"
+    "website": "https://www.israir.co.il/",
+    "isIsraeli": true
   },
   {
     "name": {
