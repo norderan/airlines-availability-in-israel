@@ -1,12 +1,31 @@
-# React + Vite
+# SkyTLV ✈️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SkyTLV is a **React web application** designed to provide real-time information on airline flight availability to **Ben Gurion Airport (TLV)** in Israel. In times of regional unrest, it highlights the impact on air travel, clearly showing which airlines are operating and which have suspended flights.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Flight Status:** See at a glance which airlines are available and which have halted operations.
+- **Direct Links:** Convenient links to airline websites for booking or further information.
+- **Return Dates:** For unavailable airlines, get an estimated return date for service resumption.
+- **Multilingual Support:** Seamlessly switch between **English and Hebrew** interfaces.
+- **Theme Toggle:** Enjoy comfortable viewing with **bright and dark modes**.
+- **Responsive Design:** Fully optimized for a smooth experience on **mobile devices**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Development Insights
+
+SkyTLV serves as a comprehensive demonstration of my web development skills. Throughout its creation, I focused on best practices and expanding my knowledge in several key areas:
+
+- **Project Management:** Gaining experience in organizing and structuring a multi-faceted application.
+- **React Mastery:** Deep diving into **Context API** for global state management, **React Router** for navigation, efficient **state management**, and robust **component development**.
+- **Dynamic UI:** Implementing features like **dark mode** and **multilingual support** for enhanced user experience.
+- **Styling:** Utilizing **SASS** for powerful CSS pre-processing and **CSS Modules** for scoped styling.
+- **Data Handling:** Practicing effective strategies for **data manipulation** and presentation.
+- **Vite:** Leveraging this **fast build tool** for an optimized development workflow.
+
+---
+
+Made with ❤️ by Yazan Abu Queider. All rights reserved © 2025.
