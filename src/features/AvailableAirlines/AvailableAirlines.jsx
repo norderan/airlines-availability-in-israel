@@ -4,6 +4,8 @@ import airlinesData from "../../data/airlinesAvailabilityInIsrael.json";
 import { useLanguage } from "../../context/LanguageContext";
 import AirlineCard from "../../components/AirlineCard/AirlineCard";
 import { useState } from "react";
+import MessageAlert from "../../components/MessageAlert/MessageAlert";
+
 function AvailableAirlines() {
   const [showAvailableAirlines, setShowAvailableAirlines] = useState(true);
 
@@ -51,6 +53,8 @@ function AvailableAirlines() {
   };
   return (
     <div className={language === "hebrew" ? styles.hebrewText : ""}>
+      <MessageAlert />
+
       <div className={styles.accordionHeader}>
         <h1>
           {showAvailableAirlines === true

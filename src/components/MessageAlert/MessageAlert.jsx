@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
-
+import { TriangleAlert } from "lucide-react";
+import style from "./MessageAlert.module.scss";
 function MessageAlert() {
   const { language } = useLanguage();
 
@@ -12,11 +13,12 @@ function MessageAlert() {
         : "הטבלה שלהלן מסכמת מידע אודות חברות תעופה זרות, אשר נאסף בהתאם להודעותיהן הרשמיות ולפרסומים באמצעי התקשורת. יחד עם זאת, שימו לב כי בשל המלחמה וסגירת המרחב האווירי הישראלי, טיסות אזרחיות סדירות מושעות. החריגים היחידים הם טיסות חילוץ מיוחדות המאורגנות להשבת ישראלים השוהים כרגע מחוץ למדינה.",
   };
   return (
-    <div>
-      <h1>{text.header}</h1>
+    <div className={style.main}>
+      <div className={style.header}>
+        <TriangleAlert size={48} class={style.icon} />
+        <h1>{text.header}</h1>
+      </div>
       <p>{text.discription}</p>
-      <span></span>
-      <br></br>
     </div>
   );
 }
