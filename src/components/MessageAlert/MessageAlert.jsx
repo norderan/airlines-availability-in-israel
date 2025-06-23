@@ -1,0 +1,24 @@
+import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
+
+function MessageAlert() {
+  const { language } = useLanguage();
+
+  const text = {
+    header: language === "english" ? "For your attention!" : "לתשומת לבך!",
+    discription:
+      language === "english"
+        ? "The following table summarizes information regarding foreign airlines, drawing from their own issued statements and media reports. However, please be aware that due to the war and the subsequent closure of Israeli airspace, regular civilian flights remain suspended. The only exceptions are special rescue flights organized to bring back Israelis who are currently abroad."
+        : "הטבלה שלהלן מסכמת מידע אודות חברות תעופה זרות, אשר נאסף בהתאם להודעותיהן הרשמיות ולפרסומים באמצעי התקשורת. יחד עם זאת, שימו לב כי בשל המלחמה וסגירת המרחב האווירי הישראלי, טיסות אזרחיות סדירות מושעות. החריגים היחידים הם טיסות חילוץ מיוחדות המאורגנות להשבת ישראלים השוהים כרגע מחוץ למדינה.",
+  };
+  return (
+    <div>
+      <h1>{text.header}</h1>
+      <p>{text.discription}</p>
+      <span></span>
+      <br></br>
+    </div>
+  );
+}
+
+export default MessageAlert;

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { Home, Info, Menu, X } from "lucide-react";
 import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
+import MessageAlert from "../MessageAlert/MessageAlert";
 function Layout() {
   const { language, setLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -216,6 +217,7 @@ function Layout() {
       </header>
       <main>
         <div className={styles.mainContent}>
+          <MessageAlert />
           <Outlet />
         </div>
       </main>
