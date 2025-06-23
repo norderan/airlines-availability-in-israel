@@ -35,7 +35,12 @@ export default function dateProcessor(dateStr, language) {
   const now = new Date();
   const currentYear = now.getFullYear();
 
-  let result = `${day} ${monthNames[language][month - 1]}`;
+  let result;
+  if (day === 0) {
+    result = `${monthNames[language][month - 1]}`;
+  } else {
+    result = `${day} ${monthNames[language][month - 1]}`;
+  }
   if (year !== currentYear) {
     result += ` ${year}`;
   }
