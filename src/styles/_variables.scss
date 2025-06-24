@@ -6,9 +6,11 @@
 $primary-hex: #b0e0e6;
 $secondary-hex: #007bff;
 $accent-hex: #c40048;
-$dark-primary-hex: #000616;
+$dark-primary-hex: #080016;
 $dark-secondary-hex: #007bff;
 $dark-accent-hex: #c40048;
+
+// #b0e0e6;
 
 :root {
   // Brand & Accent Colors
@@ -25,13 +27,13 @@ $dark-accent-hex: #c40048;
     #{red($accent-hex)}, #{green($accent-hex)}, #{blue($accent-hex)};
 
   // Glass colors
-  --color-primary-glass: rgba(var(--color-primary-rgb), 0.7);
+  --color-primary-glass: rgba(var(--color-primary-rgb), 0.5);
   --color-secondary-glass: rgba(var(--color-secondary-rgb), 0.7);
   --color-accent-glass: rgba(var(--color-accent-rgb), 0.7);
 
   // Text Colors
-  --color-text-primary: #333333;
-  --color-text-secondary: #555555;
+  --color-text-primary: #2b1724;
+  --color-text-secondary: #361e2b;
   --color-text-inverted: #ffffff;
 
   // Border & Shadow
@@ -73,8 +75,8 @@ $dark-accent-hex: #c40048;
   --color-accent-glass: rgba(var(--color-accent-rgb), 0.7);
 
   // Text Colors
-  --color-text-primary: #f0f0f0;
-  --color-text-secondary: #cccccc;
+  --color-text-primary: #f5efff;
+  --color-text-secondary: #f2e9f6;
   --color-text-inverted: #181818;
 
   // Border & Shadow
