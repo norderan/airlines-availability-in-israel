@@ -33,7 +33,6 @@
 
   position: relative;
   border-radius: 20px;
-  margin-bottom: 15px;
   overflow: hidden;
   max-width: 1000px;
   width: 100%;
@@ -59,45 +58,6 @@
       z-index: 1;
       flex-grow: 1;
     }
-    .dateOverlay {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 25px 0px;
-      background-color: rgba(0, 2, 74, 0.6);
-      margin: 0;
-      min-width: 150px;
-
-      .returnDate {
-        color: #f43652;
-        text-shadow:
-          0 0 8px rgba(255, 0, 0, 0.7),
-          0 0 16px rgba(235, 24, 55, 0.4),
-          0 0 40px rgba(235, 24, 55, 0.3);
-
-        white-space: nowrap; // Prevent wrapping for short text
-      }
-      .available {
-        // Style for the strong tag
-
-        color: #2ecc40;
-        text-shadow:
-          0 0 8px rgba(46, 204, 64, 0.7),
-          0 0 16px rgba(46, 204, 64, 0.4),
-          0 0 40px rgba(46, 204, 64, 0.3);
-
-        white-space: nowrap; // Prevent wrapping for short text
-      }
-      .unknown {
-        color: #ffa500;
-        text-shadow:
-          0 0 8px rgba(255, 165, 0, 0.7),
-          0 0 16px rgba(255, 140, 0, 0.4),
-          0 0 40px rgba(255, 140, 0, 0.3);
-
-        white-space: nowrap; // Prevent wrapping for short text
-      }
-    }
 
     h3 {
       margin: 0;
@@ -113,6 +73,47 @@
       &.expanded {
         transform: rotate(180deg);
       }
+    }
+  }
+
+  .dateOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0px;
+    background-color: rgba(0, 2, 74, 0.6);
+    margin: 0;
+    min-width: 150px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    .returnDate {
+      color: #f43652;
+      text-shadow:
+        0 0 8px rgba(255, 0, 0, 0.7),
+        0 0 16px rgba(235, 24, 55, 0.4),
+        0 0 40px rgba(235, 24, 55, 0.3);
+
+      white-space: nowrap; // Prevent wrapping for short text
+    }
+    .available {
+      // Style for the strong tag
+
+      color: #2ecc40;
+      text-shadow:
+        0 0 8px rgba(46, 204, 64, 0.7),
+        0 0 16px rgba(46, 204, 64, 0.4),
+        0 0 40px rgba(46, 204, 64, 0.3);
+
+      white-space: nowrap; // Prevent wrapping for short text
+    }
+    .unknown {
+      color: #ffa500;
+      text-shadow:
+        0 0 8px rgba(255, 165, 0, 0.7),
+        0 0 16px rgba(255, 140, 0, 0.4),
+        0 0 40px rgba(255, 140, 0, 0.3);
+
+      white-space: nowrap; // Prevent wrapping for short text
     }
   }
 
@@ -141,38 +142,70 @@
       text-shadow:
         0 0 8px rgba(0, 2, 74, 0.5),
         0 0 16px rgba(0, 2, 74, 0.3);
-      p {
-        flex: 1;
-        margin: 0px 40px 20px 40px;
-        @include variables.pTheme(var(--color-text-invert));
-        font-weight: 500;
-      }
-      .dateOverlay {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0px 25px 0 25px;
-        background-color: rgba(0, 2, 74, 0.6);
-        min-width: 100px;
-        a {
-          margin-bottom: 20px;
 
+      @media (min-width: 768px) {
+        .dateOverlay {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          > * {
-            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
-            color: rgba(255, 255, 255, 0.7);
-            &:hover {
-              color: #c40048d0;
-              filter: drop-shadow(0 0 5px #c40048d0)
-                drop-shadow(0 0 8px #c40048d0);
+          padding: 0px 25px 0 25px;
+          background-color: rgba(0, 2, 74, 0.6);
+          min-width: 100px;
+          a {
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            > * {
+              filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+              color: rgba(255, 255, 255, 0.7);
+              &:hover {
+                color: #c40048d0;
+                filter: drop-shadow(0 0 5px #c40048d0)
+                  drop-shadow(0 0 8px #c40048d0);
+              }
             }
           }
         }
       }
     }
+  }
+}
+p {
+  flex: 1;
+  margin: 0px 40px 20px 40px;
+  @include variables.pTheme(var(--color-text-invert));
+  font-weight: 500;
+}
+@media (max-width: 500px) {
+  .dateOverlay {
+    display: none;
+  }
+  p {
+    margin: 20px;
+
+    font-size: 1rem;
+  }
+  strong {
+    font-size: 1rem;
+  }
+  .cardHeader .dateOverlay {
+    min-width: 120px;
+  }
+
+  .cardDescription .dateOverlay {
+    display: none;
+  }
+
+  .expandableCard .cardHeader h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dateOverlay {
   }
 }

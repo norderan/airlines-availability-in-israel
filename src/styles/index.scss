@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 432px;
+  @include variables.bg();
 }
 
 h1 {
