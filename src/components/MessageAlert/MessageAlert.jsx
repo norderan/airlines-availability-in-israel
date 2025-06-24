@@ -6,7 +6,7 @@ function MessageAlert() {
   const { language } = useLanguage();
 
   const text = {
-    header: language === "english" ? "For your attention!" : "לתשומת לבך!",
+    header: language === "english" ? "Attention!" : "לתשומת לבך!",
     discription:
       language === "english"
         ? "The following table summarizes information regarding foreign airlines, drawing from their own issued statements and media reports. However, please be aware that due to the war and the subsequent closure of Israeli airspace, regular civilian flights remain suspended. The only exceptions are special rescue flights organized to bring back Israelis who are currently abroad."

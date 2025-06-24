@@ -4,6 +4,8 @@ import airlinesData from "../../data/airlinesAvailabilityInIsrael.json";
 import { useLanguage } from "../../context/LanguageContext";
 import AirlineCard from "../../components/AirlineCard/AirlineCard";
 import parseDateString from "../../utils/parseDateString";
+import MessageAlert from "../../components/MessageAlert/MessageAlert";
+
 function AvailableAirlines() {
   const [showAvailableAirlines, setShowAvailableAirlines] = useState(true);
   const [sortBy, setSortBy] = useState("israeli");
@@ -79,62 +81,67 @@ function AvailableAirlines() {
     setSortBy("israeli");
   };
   return (
-    <div className={language === "hebrew" ? styles.hebrewText : ""}>
-      <div className={styles.accordionHeader}>
-        <h1>
-          {showAvailableAirlines === true
-            ? currentTranslations.availableAirlines
-            : currentTranslations.unavailableAirlines}
-        </h1>
-        <button
-          className={styles.toggleButton}
-          onClick={toggleAvailableAirlines}
-        >
-          {showAvailableAirlines === true
-            ? currentTranslations.buttonLabelAvailable
-            : currentTranslations.buttonLabelUnavailable}
-          {currentTranslations.buttonLabel}
-        </button>
+    <div className={styles.main}>
+      <div>
+        <MessageAlert />
       </div>
-      <div className={styles.accordionSubHeader}>
-        <h3>{currentTranslations.sort}</h3>
-
-        {showAvailableAirlines !== true && (
-          <button onClick={handleSortReturnDate}>
-            {sortBy === "closerDate"
-              ? currentTranslations.returnDateLabel + "↓"
-              : sortBy === "distantDate"
-                ? currentTranslations.returnDateLabel + "↑"
-                : currentTranslations.returnDateLabel}
+      <div>
+        <div className={styles.accordionHeader}>
+          <h1>
+            {showAvailableAirlines === true
+              ? currentTranslations.availableAirlines
+              : currentTranslations.unavailableAirlines}
+          </h1>
+          <button
+            className={styles.toggleButton}
+            onClick={toggleAvailableAirlines}
+          >
+            {showAvailableAirlines === true
+              ? currentTranslations.buttonLabelAvailable
+              : currentTranslations.buttonLabelUnavailable}
+            {currentTranslations.buttonLabel}
           </button>
-        )}
-        <button onClick={handleSortName}>
-          {sortBy === "AlphabeticalAtoZ"
-            ? currentTranslations.sortByName + "↓"
-            : sortBy === "AlphabeticalZtoA"
-              ? currentTranslations.sortByName + "↑"
-              : currentTranslations.sortByName}
-        </button>
-        <button onClick={handleSortByIsraeli}>
-          {sortBy === "israeli"
-            ? currentTranslations.israeli + "↑"
-            : currentTranslations.israeli}
-        </button>
-      </div>
-      {filteredAndSortedAirlines.length === 0 ? (
-        <p>{currentTranslations.noAirlines}</p>
-      ) : (
-        <div className={styles.accordionBody}>
-          {filteredAndSortedAirlines.map((airline) => (
-            <AirlineCard
-              key={airline}
-              airline={airline}
-              isOpen={airline === activeIndex}
-              onClick={() => handleItemClick(airline)}
-            />
-          ))}
         </div>
-      )}
+        <div className={styles.accordionSubHeader}>
+          <h3>{currentTranslations.sort}</h3>
+
+          {showAvailableAirlines !== true && (
+            <button onClick={handleSortReturnDate}>
+              {sortBy === "closerDate"
+                ? currentTranslations.returnDateLabel + "↓"
+                : sortBy === "distantDate"
+                  ? currentTranslations.returnDateLabel + "↑"
+                  : currentTranslations.returnDateLabel}
+            </button>
+          )}
+          <button onClick={handleSortName}>
+            {sortBy === "AlphabeticalAtoZ"
+              ? currentTranslations.sortByName + "↓"
+              : sortBy === "AlphabeticalZtoA"
+                ? currentTranslations.sortByName + "↑"
+                : currentTranslations.sortByName}
+          </button>
+          <button onClick={handleSortByIsraeli}>
+            {sortBy === "israeli"
+              ? currentTranslations.israeli + "↑"
+              : currentTranslations.israeli}
+          </button>
+        </div>
+        {filteredAndSortedAirlines.length === 0 ? (
+          <p>{currentTranslations.noAirlines}</p>
+        ) : (
+          <div className={styles.accordionBody}>
+            {filteredAndSortedAirlines.map((airline) => (
+              <AirlineCard
+                key={airline}
+                airline={airline}
+                isOpen={airline === activeIndex}
+                onClick={() => handleItemClick(airline)}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

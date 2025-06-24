@@ -128,6 +128,7 @@ $dark-accent-hex: #c40048;
 }
 
 @mixin buttonTheme {
+  touch-action: manipulation;
   background-color: var(--color-secondary);
   @include pTheme(white);
   font-weight: 800;

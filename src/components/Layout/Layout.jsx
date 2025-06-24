@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { Home, Info, Menu, X } from "lucide-react";
 import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
-import MessageAlert from "../MessageAlert/MessageAlert";
 
 function Layout() {
   const { language, setLanguage } = useLanguage();
@@ -217,9 +216,6 @@ function Layout() {
         </nav>
       </header>
       <main>
-        <div className={styles.mainContent}>
-          <MessageAlert />
-        </div>
         <div className={styles.mainContent}>
           <Outlet />
         </div>

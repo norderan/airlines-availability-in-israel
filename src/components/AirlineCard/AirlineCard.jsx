@@ -77,7 +77,18 @@ const AirlineCard = ({ airline, isOpen, onClick }) => {
           role="region"
         >
           <div className={styles.cardDescription}>
-            <p>{text.description}</p>
+            <p>
+              {text.description}{" "}
+              <a
+                href={airline.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.websiteLinkSmall}
+              >
+                <ExternalLink size={20} />
+              </a>
+            </p>
+
             <div className={styles.dateOverlay}>
               {airline.website && (
                 <a

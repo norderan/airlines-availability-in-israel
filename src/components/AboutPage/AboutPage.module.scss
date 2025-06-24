@@ -1,12 +1,35 @@
 @use "../../styles/variables";
 
 .mainContainer {
+  div .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h1 {
+      margin: 10px;
+    }
+    .icon {
+      color: #c40048;
+      filter: drop-shadow(0 0 8px #c40048);
+    }
+  }
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  background: var(--color-primary-glass);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+
   h1 {
     color: var(--color-text-primary);
-    margin: 0;
   }
+
   p {
     color: var(--color-text-secondary);
   }
@@ -21,5 +44,11 @@
         color: var(--color-accent);
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 10px;
   }
 }

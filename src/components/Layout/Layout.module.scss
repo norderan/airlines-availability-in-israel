@@ -50,9 +50,6 @@
   div.container header {
     margin-bottom: 10px;
   }
-  main .mainContent:first-child {
-    margin-bottom: 10px;
-  }
 
   h1 {
     font-weight: 800;
@@ -71,6 +68,7 @@
   z-index: 1001;
   padding-top: 15px;
   border-radius: 50px;
+  user-select: none;
 }
 
 .mobileDarkmodeButton {
@@ -98,13 +96,13 @@ ul {
   margin: 0;
   gap: 30px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   padding: 20px;
 
   min-height: calc(100vh - 40px);
-
   header {
     display: flex;
     flex-direction: row;
@@ -159,6 +157,11 @@ ul {
 
   main {
     flex-grow: 1;
+    align-self: center;
+    .mainContent {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   footer {
@@ -179,18 +182,4 @@ ul {
       margin: 0;
     }
   }
-}
-.mainContent {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  background: var(--color-primary-glass);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.2px);
-  -webkit-backdrop-filter: blur(6.2px);
 }

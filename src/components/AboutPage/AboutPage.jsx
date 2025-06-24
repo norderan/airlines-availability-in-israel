@@ -1,22 +1,19 @@
 import React from "react";
 import styles from "./AboutPage.module.scss";
 import { useLanguage } from "../../context/LanguageContext";
-import { Github, Instagram, Mail } from "lucide-react";
+import { Github, Instagram, Mail, Info } from "lucide-react";
 const AboutPage = () => {
   const { language } = useLanguage();
-  const text = {
-    about: language === "english" ? "About" : "אודות",
-    descpition:
-      language === "english"
-        ? "This is a general description for the section."
-        : "",
-  };
+
   return (
     <div className={styles.mainContainer}>
       {language === "english" ? (
-        // English Content Block
         <div>
-          <h1>About SkyTLV</h1>
+          <div className={styles.header}>
+            <Info size={42} className={styles.icon} />
+            <h1>About SkyTLV</h1>
+          </div>
+
           <p>Welcome to SkyTLV!</p>
           <p>
             <strong>
@@ -49,8 +46,11 @@ const AboutPage = () => {
       ) : (
         // Hebrew Content Block
         <div>
-          {" "}
-          <h1>{text.about}</h1>
+          <div className={styles.header}>
+            <Info size={42} className={styles.icon} />
+            <h1>אודות</h1>{" "}
+          </div>
+
           <p>ברוכים הבאים ל- SkyTLV!</p>
           <p>
             <strong>

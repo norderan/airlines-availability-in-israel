@@ -1,5 +1,24 @@
 @use "../../styles/variables";
 
+.main > div {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  background: var(--color-primary-glass);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+}
+
+.main > :first-child {
+  margin-bottom: 20px;
+}
 .accordionBody {
   display: flex;
   flex-direction: column;
@@ -38,7 +57,7 @@
       font-size: 1rem;
     }
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     button {
       font-size: 1rem;
@@ -65,5 +84,13 @@
 
   .logoContainer svg {
     width: 38px; // Adjust SVG size
+  }
+
+  .main > div {
+    padding: 10px;
+  }
+
+  .main > :first-child {
+    margin-bottom: 10px;
   }
 }
